@@ -71,6 +71,26 @@ a {
   outline-offset: 2px;
 }
 
+.js-reveal {
+  opacity: 0;
+  transform: translateY(12px);
+  transition: opacity 500ms ease, transform 500ms ease;
+  will-change: opacity, transform;
+}
+
+.js-reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .js-reveal {
+    transition: none;
+    transform: none;
+  }
+}
+
 // ======================
 // Layout helpers
 // ======================
@@ -87,13 +107,20 @@ a {
   scroll-snap-align: start;
   scroll-margin-top: $header-height;
 
-  @media (min-width: $break-md) {
-    padding: 1.5rem 0;
+  @media (min-width: $break-md) {padding: 1.5rem 0}
+}
+
+#seance-essai{
+  scroll-snap-align: start;
+  scroll-margin-top: $header-height;
+  @media (max-width: $break-md) {
+    scroll-margin-top: calc($header-height + 1.5rem);
   }
 }
 
 .section-intro {
-  max-width: 40rem;
+  max-width: 1120px;
+  margin: auto;
 }
 
 // ======================
@@ -239,7 +266,9 @@ a {
 
 .btn-full {
   width: 100%;
-  @media all and (min-width: 550px) {width: fit-content}
+  &:not(.exempt){
+    @media all and (min-width: 550px) {width: fit-content}
+  }
 }
 
 // ======================
@@ -273,7 +302,7 @@ a {
 .hero-content {
   position: relative;
   padding-block: 5rem 4rem;
-  max-width: 40rem;
+  max-width: 1120px;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -292,10 +321,7 @@ a {
   line-height: $line-height-title;
   margin-bottom: 1rem;
   margin-top: 0;
-
-  @media (min-width: $break-md) {
-    font-size: 2.35rem;
-  }
+  font-size: clamp(2.5rem, 8vw, 5.5rem);
 }
 
 .hero-text {
@@ -381,6 +407,7 @@ h2{line-height: $line-height-title}
   box-shadow: $shadow-soft;
   position: relative;
   overflow: hidden;
+  height: 100%;
 
   @media (min-width: $break-md) {padding: 2rem}
 
@@ -442,8 +469,13 @@ h2{line-height: $line-height-title}
 // ======================
 
 .section-benefits{
-    padding: 1em 0 2.5em;
-    h2{font-weight: 600}
+  padding: 1em 0 2.5em;
+  h2{
+    font-weight: 600;
+    text-align: center;
+    font-size: clamp(1.6rem, 5vw, 2rem);
+    @media all and (min-width: $break-md) {padding-inline: 2rem}
+  }
 }
 
 .benefits-grid {
@@ -480,23 +512,23 @@ h2{line-height: $line-height-title}
 // ======================
 
 .section-steps {
-    background-color: $color-primary;
-    color: $color-text-light;
-    h2 {
-        font-size: 2rem;
-        margin-bottom: 0;
-        font-weight: 600;
-        text-align: center;
-    }
-    .steps-subtitle {
-        text-align: center;
-        font-size: 0.9rem;
-        text-transform: uppercase;
-        margin-bottom: 2rem;
-        color: $color-text-grey;
-    }
+  background-color: $color-primary;
+  color: $color-text-light;
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 0;
+    font-weight: 600;
+    text-align: center;
+  }
+  .steps-subtitle {
+    text-align: center;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+    color: $color-text-grey;
+  }
 
-    .container{margin: 3em 0}
+  .container{margin: 3em auto}
 
 }
 
@@ -562,7 +594,7 @@ h2{line-height: $line-height-title}
 
 .slider-wrapper {
   position: relative;
-  max-width: 420px;
+  max-width: 1120px;
   margin: auto;
 }
 
@@ -595,8 +627,9 @@ h2{line-height: $line-height-title}
 .slide img {
   width: 100%;
   display: block;
-  height: 220px;
+  height: 30vh;
   object-fit: cover;
+  @media all and (min-width: 800px) {height: 50vh}
 }
 
 .slide p {
@@ -659,6 +692,7 @@ h2{line-height: $line-height-title}
   box-shadow: $shadow-soft;
   display: flex;
   flex-direction: column;
+  height: fit-content;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
 }
 
@@ -673,7 +707,7 @@ h2{line-height: $line-height-title}
 }
 
 .coach-body {
-  padding: 1.15rem 1.2rem 1.3rem;
+  padding: 1.15rem 1.2rem;
 
   h3 {
     margin-top: 0;
@@ -684,6 +718,18 @@ h2{line-height: $line-height-title}
   p {
     margin: 0;
     font-size: 0.96rem;
+  }
+
+  .coach-toggle{
+    margin-top: 1rem;
+    border-radius: calc($radius-lg - 1.2rem);
+  }
+
+  .coach-text.is-clamped {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
   }
 }
 

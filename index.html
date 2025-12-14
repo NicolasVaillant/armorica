@@ -10,7 +10,7 @@
     <meta property="og:title" content="CrossFit Armorica – La communauté qui vous fait évoluer" />
     <meta property="og:description" content="Séances encadrées, communauté bienveillante et programmation adaptée à tous les niveaux. Réservez votre séance d’essai gratuite." />
     <meta property="og:url" content="https://www.crossfitarmorica.fr/" />
-    <meta property="og:image" content="https://www.crossfitarmorica.fr/resources/images/logo/logo-crossfitarmorica.png" />
+    <meta property="og:image" content="https://www.crossfitarmorica.fr/resources/images/logo/logo-crossfit-armorica.png" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="CrossFit Armorica – La communauté qui vous fait évoluer" />
     <meta name="twitter:description" content="Rejoignez une salle de CrossFit chaleureuse, structurée et accessible, même si vous débutez." />
@@ -24,6 +24,8 @@
 
     <link rel="stylesheet" href="resources/css/styles.css" />
     <link rel="stylesheet" href="resources/css/root.css" />
+
+    <script rel="preload" src="resources/js/script.js" defer></script>
 
     <script type="application/ld+json">
     {
@@ -67,7 +69,7 @@
     <div class="container header-inner">
         <nav class="main-nav" aria-label="Navigation principale">
             <a href="#top" class="logo" aria-label="Retour à l’accueil CrossFit Armorica">
-                <img src="resources/images/logo/logo-crossfitarmorica.png" alt="Logo CrossFit Armorica" loading="lazy">
+                <img src="resources/images/logo/logo-crossfit-armorica.png" alt="Logo CrossFit Armorica" loading="lazy">
             </a>
             <ul class="nav-links">
                 <li><a href="#decouverte">Découvrir la box</a></li>
@@ -101,7 +103,7 @@
         </div>
     </section>
 
-    <section id="decouverte" class="section section-intro" aria-labelledby="intro-title">
+    <section id="decouverte" class="section section-intro js-reveal" aria-labelledby="intro-title">
         <div class="container section-grid">
             <article class="intro-text">
                 <h2 id="intro-title">CrossFit Armorica :<br> plus qu’une salle, une communauté</h2>
@@ -128,14 +130,14 @@
                         <label for="message">Précisions (facultatif)</label>
                         <textarea id="message" name="message" rows="3" aria-label="Précisions sur votre demande" placeholder="Vous pouvez préciser vos disponibilités, vos objectifs, ou tout autre détail pertinent."></textarea>
                     </div>
-                    <button type="submit" class="btn btn-primary btn-full">Envoyer ma demande</button>
+                    <button type="submit" class="btn btn-primary btn-full exempt">Envoyer ma demande</button>
                     <p class="form-note">Vos données ne sont utilisées que pour vous recontacter.</p>
                 </form>
             </aside>
         </div>
     </section>
 
-    <section class="section section-benefits" aria-labelledby="benefits-title">
+    <section class="section section-benefits js-reveal" aria-labelledby="benefits-title">
         <div class="container">
             <h2 id="benefits-title">Découvrez comment nous avons aidé des centaines de personnes à être en meilleure santé.</h2>
             <div class="benefits-grid" role="list">
@@ -155,7 +157,7 @@
         </div>
     </section>
 
-    <section id="etapes-debuter" class="section section-steps" aria-labelledby="steps-title">
+    <section id="etapes-debuter" class="section section-steps js-reveal" aria-labelledby="steps-title">
         <div class="container">
             <h2 id="steps-title">Comment débuter son aventure ?</h2>
             <p class="steps-subtitle">L'EFFORT N'ATTEND QUE VOUS.</p>
@@ -221,24 +223,12 @@
                         <i class="fas fa-chevron-right"></i>
                     </button>
                 </div>
-
-                <script>
-                    const slider = document.getElementById("slider");
-                    function scrollSlider(direction) {
-                        const slideWidth = slider.clientWidth;
-                        slider.scrollBy({
-                            left: direction * slideWidth,
-                            behavior: "smooth"
-                        });
-                    }
-                </script>
-
             </div>
         </div>
     </section>
 
     <!-- EQUIPE -->
-    <section id="equipe" class="section section-team" aria-labelledby="team-title">
+    <section id="equipe" class="section section-team js-reveal" aria-labelledby="team-title">
     <div class="container">
         <h2 id="team-title">L’équipe</h2>
 
@@ -246,40 +236,64 @@
             <article class="coach-card" role="listitem">
                 <img src="resources/images/coaches/coach-4.jpg" alt="Photo de Jérémy, Head Coach CrossFit Armorica" loading="lazy" class="coach-photo">
                 <div class="coach-body">
-                <h3>Jérémy – Head Coach</h3>
-                <p>Issu d’un domaine professionnel totalement different  j’ai pu pratiquer en loisir la musculation et le Viet Vo Dao. En plus de ma pratique  personnel j’ai pu découvrir le coaching et l’accompagnement des personnes dans leurs objectifs ce qui m’a donné envie d’ne faire mon métier en ayant découvert le CrossFit. J’ai repris mes études à 31 ans  afin d’obtenir mon bpjeps et suite à cela j’ai ouvert ma propre salle à Plérin afin d’accompagner le plus de gens possible dans leurs objectifs et diffuser notre vision du bien être et de la bonne santé par le sport. Que cela soit pour la compétition ou pour se sentir mieux dans son quotidien.</p>
-                <br>
-                <p>J’ai hâte de vous retrouver à la box avec mon équipe !</p>
+                    <h3>Jérémy – Head Coach</h3>
+                    <div class="coach-text" id="coach-1-text">
+                        <p>Issu d’un domaine professionnel totalement different  j’ai pu pratiquer en loisir la musculation et le Viet Vo Dao. En plus de ma pratique  personnel j’ai pu découvrir le coaching et l’accompagnement des personnes dans leurs objectifs ce qui m’a donné envie d’ne faire mon métier en ayant découvert le CrossFit. J’ai repris mes études à 31 ans  afin d’obtenir mon bpjeps et suite à cela j’ai ouvert ma propre salle à Plérin afin d’accompagner le plus de gens possible dans leurs objectifs et diffuser notre vision du bien être et de la bonne santé par le sport. Que cela soit pour la compétition ou pour se sentir mieux dans son quotidien.</p>
+                        <br>
+                        <p>J’ai hâte de vous retrouver à la box avec mon équipe !</p>
+                    </div>
+                    <button class="coach-toggle btn btn-primary btn-full exempt" 
+                        type="button" 
+                        aria-expanded="false" 
+                        aria-controls="coach-1-text">Lire la suite</button>
                 </div>
             </article>
 
             <article class="coach-card" role="listitem">
                 <img src="resources/images/coaches/coach-2.jpg" alt="Photo de Chloé, coach CrossFit Armorica" loading="lazy" class="coach-photo">
                 <div class="coach-body">
-                <h3>Chloé – Coach</h3>
-                <p>Ancienne gymnaste  j’ai redécouvert le sport en 2017 grâce au CrossFit, jusqu’à devenir coach en 2024. Mes forces : j’ai vécu le surpoids, j’ai été très sédentaire, et j’ai aussi connu la compétition. Cette expérience variée me permet d’accompagner aussi bien les objectifs santé que la performance. Depuis un an, je me spécialise dans la santé féminine (cycle, sommeil, postpartum). À la box, je propose : du coaching de groupe, du coaching individuel pour progresser dans un domaine précis, et un accompagnement dédié aux femmes.</p>
-                <br>
-                <p>Hâte de vous retrouver à la box !</p>
+                    <h3>Chloé – Coach</h3>
+                    <div class="coach-text" id="coach-2-text">
+                        <p>Ancienne gymnaste  j’ai redécouvert le sport en 2017 grâce au CrossFit, jusqu’à devenir coach en 2024. Mes forces : j’ai vécu le surpoids, j’ai été très sédentaire, et j’ai aussi connu la compétition. Cette expérience variée me permet d’accompagner aussi bien les objectifs santé que la performance. Depuis un an, je me spécialise dans la santé féminine (cycle, sommeil, postpartum). À la box, je propose : du coaching de groupe, du coaching individuel pour progresser dans un domaine précis, et un accompagnement dédié aux femmes.</p>
+                        <br>
+                        <p>Hâte de vous retrouver à la box !</p>
+                    </div>
+                    <button class="coach-toggle btn btn-primary btn-full exempt" 
+                        type="button" 
+                        aria-expanded="false" 
+                        aria-controls="coach-2-text">Lire la suite</button>
                 </div>
             </article>
 
             <article class="coach-card" role="listitem">
                 <img src="resources/images/coaches/coach-3.jpg" alt="Photo d'Arthur, coach CrossFit Armorica" loading="lazy" class="coach-photo">
                 <div class="coach-body">
-                <h3>Arthur – Coach</h3>
-                <p>J’ai toujours vécu au rythme du sport. Ancien skieur de haut niveau, j’ai mis un terme à ma carrière pour poursuivre mes études puis travailler sur les marchés financiers entre 2016 et 2021. C’est durant cette période que j’ai découvert le CrossFit… et ça a été une révélation. Ma passion pour le sport est devenue une passion pour la transmission. Aujourd’hui owner de CrossFit Lannion, j’interviens encore régulièrement chez CrossFit Armorica. J’y retrouve une équipe d’amis et de professionnels exigeants, ainsi que la joie de partager ce qui m’anime : le mouvement, la santé et la progression accessible à tous.</p>
-                <p>Egalement, pratiquant de trail, je suis convaincu que chacun peut soigner ses douleurs, devenir plus performant, plus mobile et plus confiant grâce à une pratique encadrée, cohérente et adaptée.</p>
+                    <h3>Arthur – Coach</h3>
+                    <div class="coach-text" id="coach-3-text">
+                        <p>J’ai toujours vécu au rythme du sport. Ancien skieur de haut niveau, j’ai mis un terme à ma carrière pour poursuivre mes études puis travailler sur les marchés financiers entre 2016 et 2021. C’est durant cette période que j’ai découvert le CrossFit… et ça a été une révélation. Ma passion pour le sport est devenue une passion pour la transmission. Aujourd’hui owner de CrossFit Lannion, j’interviens encore régulièrement chez CrossFit Armorica. J’y retrouve une équipe d’amis et de professionnels exigeants, ainsi que la joie de partager ce qui m’anime : le mouvement, la santé et la progression accessible à tous.</p>
+                        <p>Egalement, pratiquant de trail, je suis convaincu que chacun peut soigner ses douleurs, devenir plus performant, plus mobile et plus confiant grâce à une pratique encadrée, cohérente et adaptée.</p>
+                    </div>
+                    <button class="coach-toggle btn btn-primary btn-full exempt" 
+                        type="button" 
+                        aria-expanded="false" 
+                        aria-controls="coach-3-text">Lire la suite</button>
                 </div>
             </article>
             
             <article class="coach-card" role="listitem">
                 <img src="resources/images/coaches/coach-1.jpg" alt="Photo de Gautier, coach CrossFit Armorica" loading="lazy" class="coach-photo">
                 <div class="coach-body">
-                <h3>Gautier – Coach</h3>
-                <p>Sportif depuis toujours (karaté, kitesurf, parapente, hockey, musculation...), Lorsque j'ai découvert le CrossFit, j'ai tout de suite aimé sa polyvalence – impossible de s'ennuyer – et surtout l'ambiance de la box ! Ca ma tout de suite donné envie de faire ce dont j'ai toujours eu envie, coacher et transmettre ma passion.</p>
-                <p>Mon rôle : vous accompagner, en groupe ou en individuel, pour améliorer votre santé physique et mentale, en faisant de l'entraînement un plaisir, jamais une contrainte. La bonne humeur et la technique sont mes priorités pour une progression sûre.</p>
-                <br>
-                <p>Hâte de vous retrouver à la box pour vous aider à vous sentir mieux !</p>
+                    <h3>Gautier – Coach</h3>
+                    <div class="coach-text" id="coach-4-text">
+                        <p>Sportif depuis toujours (karaté, kitesurf, parapente, hockey, musculation...), Lorsque j'ai découvert le CrossFit, j'ai tout de suite aimé sa polyvalence – impossible de s'ennuyer – et surtout l'ambiance de la box ! Ca ma tout de suite donné envie de faire ce dont j'ai toujours eu envie, coacher et transmettre ma passion.</p>
+                        <p>Mon rôle : vous accompagner, en groupe ou en individuel, pour améliorer votre santé physique et mentale, en faisant de l'entraînement un plaisir, jamais une contrainte. La bonne humeur et la technique sont mes priorités pour une progression sûre.</p>
+                        <br>
+                        <p>Hâte de vous retrouver à la box pour vous aider à vous sentir mieux !</p>
+                    </div>
+                    <button class="coach-toggle btn btn-primary btn-full exempt" 
+                        type="button" 
+                        aria-expanded="false" 
+                        aria-controls="coach-4-text">Lire la suite</button>
                 </div>
             </article>
         </div>
@@ -287,21 +301,21 @@
     </section>
 
     <!-- PLANNING -->
-    <section id="planning" class="section section-planning" aria-labelledby="planning-title">
-    <div class="container">
-        <h2 id="planning-title">Horaires</h2>
-        <p class="section-intro">Des créneaux matin, midi et soir pour s’adapter à votre emploi du temps. Les WOD durent 1 heure, échauffement et mobilité inclus.</p>
-        <article class="card-planning" role="listitem" aria-label="Horaires d’ouverture">
-            <p>Lundi – Vendredi : 10h-13h30 / 16h00-21h00</p>
-            <p>Samedi : 9h15-12h15 / 13h00-15h00</p>
-            <p>Fermé les dimanches.</p>
-        </article>
-        <p class="planning-note">Les places étant limitées, la réservation se fait via notre application partenaire.</p>
-    </div>
+    <section id="planning" class="section section-planning js-reveal" aria-labelledby="planning-title">
+        <div class="container">
+            <h2 id="planning-title">Horaires</h2>
+            <p class="section-intro">Des créneaux matin, midi et soir pour s’adapter à votre emploi du temps. Les WOD durent 1 heure, échauffement et mobilité inclus.</p>
+            <article class="card-planning" role="listitem" aria-label="Horaires d’ouverture">
+                <p>Lundi – Vendredi : 10h-13h30 / 16h00-21h00</p>
+                <p>Samedi : 9h15-12h15 / 13h00-15h00</p>
+                <p>Fermé les dimanches.</p>
+            </article>
+            <p class="planning-note">Les places étant limitées, la réservation se fait via notre application partenaire.</p>
+        </div>
     </section>
 
     <!-- FAQ -->
-    <section id="faq" class="section section-faq" aria-labelledby="faq-title">
+    <section id="faq" class="section section-faq js-reveal" aria-labelledby="faq-title">
     <div class="container">
         <h2 id="faq-title">On répond à vos questions</h2>
         <p class="section-intro">Anticiper et répondre aux dernières questions des prospects pour lever les freins.</p>
@@ -353,7 +367,7 @@
 
         <div class="faq-cta">
         <p>Vous avez une autre question ?</p>
-        <a class="btn btn-primary" href="#seance-essai">Parlez-en avec un coach</a>
+        <a class="btn btn-primary btn-full" href="#seance-essai">Parlez-en avec un coach</a>
         </div>
     </div>
     </section>
@@ -361,7 +375,7 @@
 
 <footer class="site-footer">
     <div class="container footer-grid">
-        <img src="resources/images/logo/logo-crossfitarmorica.png" alt="Logo CrossFit Armorica" loading="lazy">
+        <img src="resources/images/logo/logo-crossfit-armorica.png" alt="Logo CrossFit Armorica" loading="lazy">
 
         <section class="footer-block" aria-label="Coordonnées de CrossFit Armorica">
             <h2 class="footer-title">CrossFit Armorica</h2>
@@ -389,19 +403,11 @@
     </div>
 
     <div class="footer-bottom">
-    <div class="container footer-bottom-inner">
-        <p>© <span id="annee-courante">2025</span> CrossFit Armorica – Tous droits réservés.</p>
-        <a href="#" class="footer-link">Mentions légales</a>
+        <div class="container footer-bottom-inner">
+            <p>© <span id="annee-courante">2025</span> CrossFit Armorica – Tous droits réservés.</p>
+            <a href="#" class="footer-link">Mentions légales</a>
+        </div>
     </div>
-    </div>
-
-    <script>
-        // Mise à jour accessible de l’année courante
-        const yearSpan = document.getElementById('annee-courante');
-        if (yearSpan) {
-            yearSpan.textContent = new Date().getFullYear();
-        }
-    </script>
 </footer>
 </body>
 </html>

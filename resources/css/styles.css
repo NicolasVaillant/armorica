@@ -38,6 +38,25 @@ a:hover, a:focus-visible {
   outline-offset: 2px;
 }
 
+.js-reveal {
+  opacity: 0;
+  transform: translateY(12px);
+  transition: opacity 500ms ease, transform 500ms ease;
+  will-change: opacity, transform;
+}
+
+.js-reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .js-reveal {
+    transition: none;
+    transform: none;
+  }
+}
 .container {
   width: 100%;
   max-width: 1120px;
@@ -56,8 +75,19 @@ a:hover, a:focus-visible {
   }
 }
 
+#seance-essai {
+  scroll-snap-align: start;
+  scroll-margin-top: 8vh;
+}
+@media (max-width: 768px) {
+  #seance-essai {
+    scroll-margin-top: calc(8vh + 1.5rem);
+  }
+}
+
 .section-intro {
-  max-width: 40rem;
+  max-width: 1120px;
+  margin: auto;
 }
 
 .skip-link {
@@ -189,7 +219,7 @@ a:hover, a:focus-visible {
   width: 100%;
 }
 @media all and (min-width: 550px) {
-  .btn-full {
+  .btn-full:not(.exempt) {
     width: fit-content;
   }
 }
@@ -221,7 +251,7 @@ a:hover, a:focus-visible {
 .hero-content {
   position: relative;
   padding-block: 5rem 4rem;
-  max-width: 40rem;
+  max-width: 1120px;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -240,11 +270,7 @@ a:hover, a:focus-visible {
   line-height: 1.2;
   margin-bottom: 1rem;
   margin-top: 0;
-}
-@media (min-width: 768px) {
-  .hero h1 {
-    font-size: 2.35rem;
-  }
+  font-size: clamp(2.5rem, 8vw, 5.5rem);
 }
 
 .hero-text {
@@ -329,6 +355,7 @@ h2 {
   box-shadow: 0 12px 30px rgba(15, 23, 42, 0.12);
   position: relative;
   overflow: hidden;
+  height: 100%;
 }
 @media (min-width: 768px) {
   .intro-form {
@@ -389,6 +416,13 @@ h2 {
 }
 .section-benefits h2 {
   font-weight: 600;
+  text-align: center;
+  font-size: clamp(1.6rem, 5vw, 2rem);
+}
+@media all and (min-width: 768px) {
+  .section-benefits h2 {
+    padding-inline: 2rem;
+  }
 }
 
 .benefits-grid {
@@ -437,7 +471,7 @@ h2 {
   color: #C3CACE;
 }
 .section-steps .container {
-  margin: 3em 0;
+  margin: 3em auto;
 }
 
 .steps-list {
@@ -495,7 +529,7 @@ h2 {
 
 .slider-wrapper {
   position: relative;
-  max-width: 420px;
+  max-width: 1120px;
   margin: auto;
 }
 
@@ -529,8 +563,13 @@ h2 {
 .slide img {
   width: 100%;
   display: block;
-  height: 220px;
+  height: 30vh;
   object-fit: cover;
+}
+@media all and (min-width: 800px) {
+  .slide img {
+    height: 50vh;
+  }
 }
 
 .slide p {
@@ -591,6 +630,7 @@ h2 {
   box-shadow: 0 12px 30px rgba(15, 23, 42, 0.12);
   display: flex;
   flex-direction: column;
+  height: fit-content;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
 }
 
@@ -605,7 +645,7 @@ h2 {
 }
 
 .coach-body {
-  padding: 1.15rem 1.2rem 1.3rem;
+  padding: 1.15rem 1.2rem;
 }
 .coach-body h3 {
   margin-top: 0;
@@ -615,6 +655,16 @@ h2 {
 .coach-body p {
   margin: 0;
   font-size: 0.96rem;
+}
+.coach-body .coach-toggle {
+  margin-top: 1rem;
+  border-radius: 0.3rem;
+}
+.coach-body .coach-text.is-clamped {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .section-planning {
