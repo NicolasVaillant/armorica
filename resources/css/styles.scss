@@ -50,10 +50,10 @@ body {
 }
 
 img {
-    max-width: 100%;
-    display: block;
-    height: auto;
-    border-radius: $radius-md;
+  max-width: 100%;
+  display: block;
+  height: auto;
+  border-radius: $radius-lg;
 }
 
 a {
@@ -84,9 +84,11 @@ a {
 
 .section {
   padding: 0;
+  scroll-snap-align: start;
+  scroll-margin-top: $header-height;
 
   @media (min-width: $break-md) {
-    padding: 4.5rem 0;
+    padding: 1.5rem 0;
   }
 }
 
@@ -128,41 +130,41 @@ a {
 }
 
 .header-inner {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 1rem;
-    padding-block: 0.6rem;
-    height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-block: 0.6rem;
+  height: 100%;
 }
 
 .logo img {
   height: 40px;
+  border-radius: 0;
 
-  @media (min-width: $break-md) {
-    height: 48px;
-  }
+  @media (min-width: $break-md) {height: 48px}
 }
 
 .main-nav {
-  display: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1.5rem;
 
-  @media (min-width: $break-md) {
-    display: block;
-  }
-
-  ul {
-    display: flex;
+  ul.nav-links {
+    display: none;
     gap: 1.5rem;
     list-style: none;
     margin: 0;
     padding: 0;
+    @media (min-width: $break-md) {display: flex}
   }
 
   a {
     font-size: 0.95rem;
     font-weight: 500;
     letter-spacing: 0.02em;
+    color: $color-text;
 
     &:hover,
     &:focus-visible {
@@ -332,10 +334,11 @@ main {
 
 .section-grid {
   display: grid;
-  gap: 2.5rem;
+  gap: 1.5rem;
 
   @media (min-width: $break-md) {
     grid-template-columns: minmax(0, 3fr) minmax(0, 2.4fr);
+    gap: 2.5rem;
     align-items: flex-start;
   }
 }
@@ -371,21 +374,21 @@ h2{line-height: $line-height-title}
 }
 
 .intro-form {
-    background-color: $color-primary;
-    color: $color-text-light;
-    border-radius: $radius-lg;
-    padding: 1.75rem 1.5rem;
-    box-shadow: $shadow-soft;
-    position: relative;
-    overflow: hidden;
+  background-color: $color-primary;
+  color: $color-text-light;
+  border-radius: $radius-lg;
+  padding: 1.75rem 1.5rem;
+  box-shadow: $shadow-soft;
+  position: relative;
+  overflow: hidden;
 
-    @media (min-width: $break-md) {padding: 2rem}
+  @media (min-width: $break-md) {padding: 2rem}
 
-    h2 {
-        position: relative;
-        margin-top: 0;
-        margin-bottom: 1em;
-    }
+  h2 {
+      position: relative;
+      margin-top: 0;
+      margin-bottom: 1em;
+  }
 }
 
 // Formulaire
@@ -685,7 +688,7 @@ h2{line-height: $line-height-title}
 }
 
 // ======================
-// Planning
+// Horaires
 // ======================
 
 .section-planning {
@@ -693,33 +696,22 @@ h2{line-height: $line-height-title}
 }
 
 .section-planning h2 {
-  font-size: 1.5rem;
+  font-size: 3rem;
+  font-family: $font-title;
   margin-bottom: 0.75rem;
+  text-transform: uppercase;
 }
 
-.planning-wrapper {
-  margin-top: 1.5rem;
-  border-radius: $radius-md;
-  overflow: hidden;
-  border: 1px solid $color-border;
+.card-planning {
   background-color: #ffffff;
-}
-
-.planning-row {
-  display: grid;
-  grid-template-columns: 1.2fr 1fr 1fr 1fr;
-  padding: 0.7rem 1rem;
-  font-size: 0.9rem;
-
-  &:nth-child(even) {
-    background-color: #f8fafc;
+  border-radius: $radius-md;
+  padding: 1.4rem 1.3rem;
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.06);
+  border: 1px solid rgba($color-border, 0.9);
+  p{
+    margin: 0;
+    padding: 0;
   }
-}
-
-.planning-row-header {
-  background-color: $color-primary;
-  color: $color-text-light;
-  font-weight: 600;
 }
 
 .planning-note {
@@ -731,7 +723,6 @@ h2{line-height: $line-height-title}
 // ======================
 // FAQ
 // ======================
-
 
 .section-faq{
     h2 {

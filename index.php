@@ -9,12 +9,12 @@
     <meta property="og:type" content="website" />
     <meta property="og:title" content="CrossFit Armorica – La communauté qui vous fait évoluer" />
     <meta property="og:description" content="Séances encadrées, communauté bienveillante et programmation adaptée à tous les niveaux. Réservez votre séance d’essai gratuite." />
-    <meta property="og:url" content="https://www.crossfit-armorica.fr/" />
-    <meta property="og:image" content="https://www.crossfit-armorica.fr/resources/images/logo/logo-crossfit-armorica.png" />
+    <meta property="og:url" content="https://www.crossfitarmorica.fr/" />
+    <meta property="og:image" content="https://www.crossfitarmorica.fr/resources/images/logo/logo-crossfitarmorica.png" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="CrossFit Armorica – La communauté qui vous fait évoluer" />
     <meta name="twitter:description" content="Rejoignez une salle de CrossFit chaleureuse, structurée et accessible, même si vous débutez." />
-    <link rel="canonical" href="https://www.crossfit-armorica.fr/" />
+    <link rel="canonical" href="https://www.crossfitarmorica.fr/" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -31,13 +31,13 @@
         "@type": "SportsActivityLocation",
         "name": "CrossFit Armorica",
         "description": "Salle de CrossFit conviviale proposant des entraînements encadrés pour tous les niveaux.",
-        "url": "https://www.exemple-crossfit-armorica.fr/",
-        "telephone": "+33-6-12-34-56-78",
+        "url": "https://www.crossfitarmorica.fr/",
+        "telephone": "+33-6-76-22-99-26",
         "address": {
             "@type": "PostalAddress",
-            "streetAddress": "1 rue de l'Armorique",
-            "addressLocality": "Rennes",
-            "postalCode": "35000",
+            "streetAddress": "1, rue Claude Bernard ",
+            "addressLocality": "Plérin",
+            "postalCode": "22190",
             "addressCountry": "FR"
         },
         "openingHoursSpecification": [
@@ -46,7 +46,7 @@
                 "dayOfWeek": [
                     "Monday","Tuesday","Wednesday","Thursday","Friday"
                 ],
-                "opens": "07:00",
+                "opens": "10:00",
                 "closes": "21:00"
             },
             {
@@ -54,35 +54,33 @@
                 "dayOfWeek": [
                     "Saturday"
                 ],
-                "opens": "09:00",
-                "closes": "13:00"
+                "opens": "09:15",
+                "closes": "15:00"
             }
         ]
     }
     </script>
 </head>
 <body>
-<a href="#contenu-principal" class="skip-link">Aller au contenu principal</a>
 
 <header class="site-header">
     <div class="container header-inner">
-        <a href="#top" class="logo" aria-label="Retour à l’accueil CrossFit Armorica">
-            <img src="resources/images/logo/logo-crossfit-armorica.png" alt="Logo CrossFit Armorica" loading="lazy">
-        </a>
-
         <nav class="main-nav" aria-label="Navigation principale">
-            <ul>
-            <li><a href="#decouverte">Découvrir la box</a></li>
-            <li><a href="#etapes-debuter">Comment débuter ?</a></li>
-            <li><a href="#equipe">L’équipe</a></li>
-            <li><a href="#planning">Planning</a></li>
-            <li><a href="#faq">FAQ</a></li>
+            <a href="#top" class="logo" aria-label="Retour à l’accueil CrossFit Armorica">
+                <img src="resources/images/logo/logo-crossfitarmorica.png" alt="Logo CrossFit Armorica" loading="lazy">
+            </a>
+            <ul class="nav-links">
+                <li><a href="#decouverte">Découvrir la box</a></li>
+                <li><a href="#etapes-debuter">Comment débuter ?</a></li>
+                <li><a href="#equipe">L’équipe</a></li>
+                <li><a href="#planning">Planning</a></li>
+                <li><a href="#faq">FAQ</a></li>
             </ul>
         </nav>
 
         <div class="header-actions">
             <a class="btn btn-secondary" href="#seance-essai">Réserver une séance d’essai</a>
-            <!-- <a href=""><i class="fas fa-bars"></i></a> -->
+            <!-- <a href="#"><i class="fas fa-bars"></i></a> -->
         </div>
     </div>
 </header>
@@ -289,69 +287,16 @@
     </section>
 
     <!-- PLANNING -->
-    <section id="planning" class="section section-planning" aria-labelledby="planning-title" style="display:none">
+    <section id="planning" class="section section-planning" aria-labelledby="planning-title">
     <div class="container">
-        <h2 id="planning-title">Le planning de la semaine</h2>
-        <p class="section-intro">
-        Des créneaux matin, midi et soir pour s’adapter à votre emploi du temps. Les WOD durent 1 heure,
-        échauffement et mobilité inclus.
-        </p>
-
-        <div class="planning-wrapper" role="table" aria-label="Planning type de la semaine CrossFit Armorica">
-        <div class="planning-row planning-row-header" role="row">
-            <span role="columnheader">Jour</span>
-            <span role="columnheader">Matin</span>
-            <span role="columnheader">Midi</span>
-            <span role="columnheader">Soir</span>
-        </div>
-
-        <div class="planning-row" role="row">
-            <span role="rowheader">Lundi</span>
-            <span>7h00 / 8h00</span>
-            <span>12h15</span>
-            <span>18h15 / 19h30</span>
-        </div>
-
-        <div class="planning-row" role="row">
-            <span role="rowheader">Mardi</span>
-            <span>7h00 / 8h00</span>
-            <span>12h15</span>
-            <span>18h15 / 19h30</span>
-        </div>
-
-        <div class="planning-row" role="row">
-            <span role="rowheader">Mercredi</span>
-            <span>—</span>
-            <span>12h15</span>
-            <span>18h15 / 19h30</span>
-        </div>
-
-        <div class="planning-row" role="row">
-            <span role="rowheader">Jeudi</span>
-            <span>7h00 / 8h00</span>
-            <span>—</span>
-            <span>18h15 / 19h30</span>
-        </div>
-
-        <div class="planning-row" role="row">
-            <span role="rowheader">Vendredi</span>
-            <span>7h00 / 8h00</span>
-            <span>12h15</span>
-            <span>18h15</span>
-        </div>
-
-        <div class="planning-row" role="row">
-            <span role="rowheader">Samedi</span>
-            <span>9h00 / 10h00</span>
-            <span>—</span>
-            <span>—</span>
-        </div>
-        </div>
-
-        <p class="planning-note">
-        Planning susceptible d’évoluer selon la saison. Les places étant limitées,
-        la réservation se fait via notre application partenaire.
-        </p>
+        <h2 id="planning-title">Horaires</h2>
+        <p class="section-intro">Des créneaux matin, midi et soir pour s’adapter à votre emploi du temps. Les WOD durent 1 heure, échauffement et mobilité inclus.</p>
+        <article class="card-planning" role="listitem" aria-label="Horaires d’ouverture">
+            <p>Lundi – Vendredi : 10h-13h30 / 16h00-21h00</p>
+            <p>Samedi : 9h15-12h15 / 13h00-15h00</p>
+            <p>Fermé les dimanches.</p>
+        </article>
+        <p class="planning-note">Les places étant limitées, la réservation se fait via notre application partenaire.</p>
     </div>
     </section>
 
@@ -416,30 +361,29 @@
 
 <footer class="site-footer">
     <div class="container footer-grid">
-        <img src="resources/images/logo/logo-crossfit-armorica.png" alt="Logo CrossFit Armorica" loading="lazy">
+        <img src="resources/images/logo/logo-crossfitarmorica.png" alt="Logo CrossFit Armorica" loading="lazy">
 
         <section class="footer-block" aria-label="Coordonnées de CrossFit Armorica">
             <h2 class="footer-title">CrossFit Armorica</h2>
-            <p>1 rue de l’Armorique<br>35000 Rennes</p>
+            <p>1, rue Claude Bernard, 22190 Plérin</p>
             <p>
-            <a href="tel:+33612345678">+33 6 12 34 56 78</a><br>
-            <a href="mailto:contact@crossfit-armorica.fr">contact@crossfit-armorica.fr</a>
+                <a href="tel:+33676229926">+33 6 76 22 99 26</a><br>
+                <a href="mailto:cf.armorica@gmail.com">cf.armorica@gmail.com</a>
             </p>
         </section>
 
     <section class="footer-block" aria-label="Horaires d’ouverture">
         <h2 class="footer-title">Horaires</h2>
-        <p>Lundi – Vendredi : 7h00–21h00<br>Samedi : 9h00–13h00</p>
-        <p>Fermé les dimanches et jours fériés.</p>
+        <p>Lundi – Vendredi : 10h-13h30 / 16h00-21h00</p>
+        <p>Samedi : 9h15-12h15 / 13h00-15h00</p>
+        <p>Fermé les dimanches.</p>
     </section>
 
     <section class="footer-block footer-social" aria-label="Réseaux sociaux CrossFit Armorica">
         <h2 class="footer-title">Suivez la box</h2>
         <ul class="social-links">
-            <li><a href="#" aria-label="X (Anciennement Twitter) de CrossFit Armorica"><i class="fa-brands fa-twitter"></i></a></li>
-            <li><a href="#" aria-label="Instagram de CrossFit Armorica"><i class="fa-brands fa-instagram"></i></a></li>
-            <li><a href="#" aria-label="Facebook de CrossFit Armorica"><i class="fa-brands fa-facebook"></i></a></li>
-            <li><a href="#" aria-label="YouTube de CrossFit Armorica"><i class="fa-brands fa-youtube"></i></a></li>
+            <li><a href="https://www.instagram.com/crossfitarmorica/" aria-label="Instagram de CrossFit Armorica"><i class="fa-brands fa-instagram"></i></a></li>
+            <li><a href="https://www.facebook.com/crossfitarmorica/" aria-label="Facebook de CrossFit Armorica"><i class="fa-brands fa-facebook"></i></a></li>
         </ul>
     </section>
     </div>

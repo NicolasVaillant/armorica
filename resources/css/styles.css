@@ -22,7 +22,7 @@ img {
   max-width: 100%;
   display: block;
   height: auto;
-  border-radius: 1rem;
+  border-radius: 1.5rem;
 }
 
 a {
@@ -47,10 +47,12 @@ a:hover, a:focus-visible {
 
 .section {
   padding: 0;
+  scroll-snap-align: start;
+  scroll-margin-top: 8vh;
 }
 @media (min-width: 768px) {
   .section {
-    padding: 4.5rem 0;
+    padding: 1.5rem 0;
   }
 }
 
@@ -93,6 +95,7 @@ a:hover, a:focus-visible {
 
 .logo img {
   height: 40px;
+  border-radius: 0;
 }
 @media (min-width: 768px) {
   .logo img {
@@ -101,24 +104,28 @@ a:hover, a:focus-visible {
 }
 
 .main-nav {
-  display: none;
-}
-@media (min-width: 768px) {
-  .main-nav {
-    display: block;
-  }
-}
-.main-nav ul {
   display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1.5rem;
+}
+.main-nav ul.nav-links {
+  display: none;
   gap: 1.5rem;
   list-style: none;
   margin: 0;
   padding: 0;
 }
+@media (min-width: 768px) {
+  .main-nav ul.nav-links {
+    display: flex;
+  }
+}
 .main-nav a {
   font-size: 0.95rem;
   font-weight: 500;
   letter-spacing: 0.02em;
+  color: #1f2933;
 }
 .main-nav a:hover, .main-nav a:focus-visible {
   color: #F0B83B;
@@ -272,11 +279,12 @@ main {
 
 .section-grid {
   display: grid;
-  gap: 2.5rem;
+  gap: 1.5rem;
 }
 @media (min-width: 768px) {
   .section-grid {
     grid-template-columns: minmax(0, 3fr) minmax(0, 2.4fr);
+    gap: 2.5rem;
     align-items: flex-start;
   }
 }
@@ -614,32 +622,22 @@ h2 {
 }
 
 .section-planning h2 {
-  font-size: 1.5rem;
+  font-size: 3rem;
+  font-family: "Lilita One", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   margin-bottom: 0.75rem;
+  text-transform: uppercase;
 }
 
-.planning-wrapper {
-  margin-top: 1.5rem;
-  border-radius: 1rem;
-  overflow: hidden;
-  border: 1px solid #e0e4ea;
+.card-planning {
   background-color: #ffffff;
+  border-radius: 1rem;
+  padding: 1.4rem 1.3rem;
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.06);
+  border: 1px solid rgba(224, 228, 234, 0.9);
 }
-
-.planning-row {
-  display: grid;
-  grid-template-columns: 1.2fr 1fr 1fr 1fr;
-  padding: 0.7rem 1rem;
-  font-size: 0.9rem;
-}
-.planning-row:nth-child(even) {
-  background-color: #f8fafc;
-}
-
-.planning-row-header {
-  background-color: #223C48;
-  color: #f9fafb;
-  font-weight: 600;
+.card-planning p {
+  margin: 0;
+  padding: 0;
 }
 
 .planning-note {
