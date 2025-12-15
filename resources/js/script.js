@@ -78,3 +78,55 @@ if (burger && menu) {
         }
     });
 }
+(function () {
+    const form = document.querySelector(".trial-form");
+    const statusEl = document.getElementById("form-status");
+    if (!form) return;
+
+    function setStatus(msg, isError = false) {
+        if (!statusEl) return;
+        statusEl.textContent = msg;
+        statusEl.style.opacity = "1";
+        statusEl.style.color = isError ? "#b91c1c" : ""; // red-ish on error
+    }
+
+    form.addEventListener("submit", async (e) => {
+        e.preventDefault();
+
+        const submitBtn = form.querySelector('button[type="submit"]');
+        if (submitBtn) {
+            submitBtn.disabled = true;
+            submitBtn.setAttribute("aria-busy", "true");
+        }
+
+        setStatus("Envoi en cours…");
+
+        try {
+            const formData = new FormData(form);
+
+            const res = await fetch(form.action, {
+                method: "POST",
+                body: formData,
+                headers: { "Accept": "application/json" }
+            });
+
+            const data = await res.json().catch(() => null);
+
+            if (!res.ok || !data) {throw new Error("Bad response")}
+
+            if (data.ok) {
+                setStatus("Merci ! Votre demande a bien été envoyée. Nous vous recontactons rapidement.");
+                form.reset();
+            } else {
+                setStatus(data.error || "Une erreur est survenue. Merci de réessayer.", true);
+            }
+        } catch (err) {
+            setStatus("Impossible d’envoyer le message pour le moment. Réessayez plus tard.", true);
+        } finally {
+            if (submitBtn) {
+                submitBtn.disabled = false;
+                submitBtn.removeAttribute("aria-busy");
+            }
+        }
+    });
+})();

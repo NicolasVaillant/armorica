@@ -130,7 +130,7 @@
 
             <aside id="seance-essai" class="intro-form" aria-labelledby="form-title">
                 <h2 id="form-title">Réservez votre séance d’essai offerte</h2>
-                <form action="#" method="post" class="trial-form" aria-describedby="form-title">
+                <form action="resources/php/contact.php" method="post" class="trial-form" aria-describedby="form-title">
                     <div class="form-group">
                         <label for="nom">Nom et prénom</label>
                         <input type="text" id="nom" name="nom" autocomplete="name" placeholder="Votre nom et prénom" required>
@@ -147,8 +147,14 @@
                         <label for="message">Précisions (facultatif)</label>
                         <textarea id="message" name="message" rows="3" aria-label="Précisions sur votre demande" placeholder="Vous pouvez préciser vos disponibilités, vos objectifs, ou tout autre détail pertinent."></textarea>
                     </div>
+                    <!-- Honeypot (anti-spam) -->
+                    <div style="position:absolute;left:-9999px" aria-hidden="true">
+                        <label for="website">Website</label>
+                        <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
+                    </div>
                     <button type="submit" class="btn btn-primary btn-full exempt">Envoyer ma demande</button>
-                    <p class="form-note">Vos données ne sont utilisées que pour vous recontacter.</p>
+                    <!-- Accessible status messages -->
+                    <p class="form-note" id="form-status" role="status" aria-live="polite">Vos données ne sont utilisées que pour vous recontacter.</p>
                 </form>
             </aside>
         </div>
