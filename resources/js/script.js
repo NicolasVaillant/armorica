@@ -1,18 +1,3 @@
-document.querySelectorAll(".coach-toggle").forEach((btn) => {
-    const targetId = btn.getAttribute("aria-controls");
-    const text = document.getElementById(targetId);
-
-    // start clamped
-    text.classList.add("is-clamped");
-
-    btn.addEventListener("click", () => {
-        const expanded = btn.getAttribute("aria-expanded") === "true";
-        btn.setAttribute("aria-expanded", String(!expanded));
-        text.classList.toggle("is-clamped", expanded);
-        btn.textContent = expanded ? "Lire la suite" : "Réduire";
-    });
-});
-// Mise à jour accessible de l’année courante
 const yearSpan = document.getElementById('annee-courante');
 if (yearSpan) {
     yearSpan.textContent = new Date().getFullYear();
@@ -52,5 +37,44 @@ if ("IntersectionObserver" in window) {
 } else {
     document.querySelectorAll(".js-reveal").forEach((el) => {
         el.classList.add("is-visible");
+    });
+}
+const burger = document.querySelector(".burger");
+const burger_icon = document.querySelector(".burger-icon");
+const menu = document.getElementById("mobile-menu");
+
+if (burger && menu) {
+    burger.addEventListener("click", () => {
+        const isOpen = burger.getAttribute("aria-expanded") === "true";
+
+        burger.setAttribute("aria-expanded", String(!isOpen));
+        burger.setAttribute(
+            "aria-label",
+            isOpen ? "Ouvrir le menu" : "Fermer le menu"
+        );
+
+        menu.style.display = (isOpen) ? 'none' : 'flex';
+        if(isOpen){
+            burger_icon.classList.replace('fa-times', 'fa-bars')
+        } else {
+            burger_icon.classList.replace('fa-bars', 'fa-times')
+        }
+        document.body.style.overflow = isOpen ? "" : "hidden";
+    });
+
+    menu.querySelectorAll("a").forEach((link) => {
+        link.addEventListener("click", () => {
+            burger.setAttribute("aria-expanded", "false");
+            burger.setAttribute("aria-label", "Ouvrir le menu");
+            menu.style.display = 'none';
+            burger_icon.classList.replace('fa-times', 'fa-bars')
+            document.body.style.overflow = "";
+        });
+    });
+
+    document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape" && burger.getAttribute("aria-expanded") === "true") {
+            burger.click();
+        }
     });
 }

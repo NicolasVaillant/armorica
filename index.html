@@ -16,6 +16,8 @@
     <meta name="twitter:description" content="Rejoignez une salle de CrossFit chaleureuse, structurée et accessible, même si vous débutez." />
     <link rel="canonical" href="https://www.crossfitarmorica.fr/" />
 
+    <link type="image/x-icon" rel="icon" href="resources/images/logo/favicon.ico">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Istok+Web:ital,wght@0,400;0,700;1,400;1,700&family=Lilita+One&display=swap" rel="stylesheet">
@@ -75,17 +77,32 @@
                 <li><a href="#decouverte">Découvrir la box</a></li>
                 <li><a href="#etapes-debuter">Comment débuter ?</a></li>
                 <li><a href="#equipe">L’équipe</a></li>
-                <li><a href="#planning">Planning</a></li>
+                <li><a href="#planning">Horaires</a></li>
                 <li><a href="#faq">FAQ</a></li>
             </ul>
         </nav>
 
         <div class="header-actions">
             <a class="btn btn-secondary" href="#seance-essai">Réserver une séance d’essai</a>
-            <!-- <a href="#"><i class="fas fa-bars"></i></a> -->
+            <button class="btn-secondary burger" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="mobile-menu">
+                <i class="fas fa-bars burger-icon"></i>
+            </button>
         </div>
     </div>
 </header>
+
+<nav id="mobile-menu" class="mobile-nav" aria-label="Navigation mobile">
+    <ul>
+        <li><a href="#decouverte">Découvrir la box</a></li>
+        <li><a href="#etapes-debuter">Comment débuter ?</a></li>
+        <li><a href="#equipe">L’équipe</a></li>
+        <li><a href="#planning">Horaires</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li class="mobile-cta">
+        <a class="btn btn-primary btn-full" href="#seance-essai">Séance d’essai</a>
+        </li>
+    </ul>
+</nav>
 
 <main id="contenu-principal">
 
@@ -108,7 +125,7 @@
             <article class="intro-text">
                 <h2 id="intro-title">CrossFit Armorica :<br> plus qu’une salle, une communauté</h2>
                 <p>CrossFit Armorica, votre box de CrossFit à Plérin, vous accueille avec une équipe de coachs certifiés et à votre écoute. Rejoignez-nous pour retrouver forme et santé dans une ambiance fun et bienveillante. On se retrouve en groupe pour partager un entraînement intense, mais toujours adapté à votre niveau, vos capacités et vos objectifs personnels.</p>
-                <img src="resources/images/others/box2.jpg" alt="Des adhérents de CrossFit Armorica en train de réaliser un WOD sur des ergomètres" loading="lazy">
+                <img src="resources/images/others/home-crossfit-armorica.png" alt="Logo CrossFit Armorica en néon sur le mur à l'entrée de la salle" loading="lazy">
             </article>
 
             <aside id="seance-essai" class="intro-form" aria-labelledby="form-title">
@@ -143,14 +160,17 @@
             <div class="benefits-grid" role="list">
                 <article class="card" role="listitem">
                     <h3>UN COACHING EXPERT</h3>
+                    <span><i class="fas fa-star"></i></span>
                     <p>Des coachs diplômés qui adaptent chaque séance à votre niveau pour vous faire progresser en toute sécurité.</p>
                 </article>
                 <article class="card" role="listitem">
                     <h3>UNE COMMUNAUTÉ SOUDÉE</h3>
+                    <span><i class="fas fa-users"></i></span>
                     <p>Plus qu'une salle, une véritable famille qui s'entraide et se motive, quel que soit votre âge ou votre condition physique.</p>
                 </article>
                 <article class="card" role="listitem">
                     <h3>DES RÉSULTATS VISIBLES</h3>
+                    <span><i class="fas fa-medal"></i></span>
                     <p>Grâce à un suivi personnalisé et une programmation intelligente, nous vous aidons à atteindre durablement vos objectifs.</p>
                 </article>
             </div>
@@ -164,7 +184,7 @@
 
             <ol class="steps-list">
                 <li class="step-item">
-                    <h3><span class="step-number">01</span> GRATUIT</h3>
+                    <h3><span class="step-number" data-text="01">01</span> GRATUIT</h3>
                     <h3 class="step-title">Faites une première séance d'essai</h3>
                     <p>Venez découvrir notre façon de travailler et l'ambiance de la box. C'est la meilleure manière de savoir si notre communauté est faite pour vous.</p>
                 </li>
@@ -192,26 +212,34 @@
                 <div class="slider" id="slider">
                     <div class="slide">
                         <img src="resources/images/users/community.png" alt="Des adhérents de CrossFit Armorica en train de se féliciter après le WOD" loading="lazy">
-                        <h3>Bien plus qu'une simple salle de sport.</h3>
-                        <p>Chez CrossFit Armorica, nous croyons à la force du collectif. Vous ne rejoignez pas une salle, mais une communauté. Ici, chaque membre, du débutant à l'athlète confirmé, est encouragé, soutenu et célébré.</p>
+                        <div class="slide-body">
+                            <h3>Bien plus qu'une simple salle de sport.</h3>
+                            <p>Chez CrossFit Armorica, nous croyons à la force du collectif. Vous ne rejoignez pas une salle, mais une communauté. Ici, chaque membre, du débutant à l'athlète confirmé, est encouragé, soutenu et célébré.</p>
+                        </div>
                     </div>
                     
                     <div class="slide">
                         <img src="resources/images/others/box.png" alt="Les écho bike et vélos de CrossFit Armorica" loading="lazy">
-                        <h3>Un environnement conçu pour votre réussite.</h3>
-                        <p>Notre box est entièrement équipée avec du matériel de pointe. Avec nos deux espaces dédiés aux WODs et au travail technique, vous disposez de tout le nécessaire pour des entraînements efficaces et variés.</p>
+                        <div class="slide-body">
+                            <h3>Un environnement conçu pour votre réussite.</h3>
+                            <p>Notre box est entièrement équipée avec du matériel de pointe. Avec nos deux espaces dédiés aux WODs et au travail technique, vous disposez de tout le nécessaire pour des entraînements efficaces et variés.</p>
+                        </div>
                     </div>
 
                     <div class="slide">
                         <img src="resources/images/others/box2.jpg" alt="Des adhérents de CrossFit Armorica en train de réaliser un WOD sur des ergomètres" loading="lazy">
-                        <h3>Deux salles, pour vous permettre de toujours progresser.</h3>
-                        <p>Notre seconde salle est dédiée à nos cours de spécialité : gymnastique, haltérophilie, renforcement musculaire ou cardio. C'est l'endroit idéal pour affiner votre technique et atteindre de nouveaux objectifs. Elle est également disponible en Free Access pour vos entraînements autonomes. Une solution complète pour une progression sur mesure.</p>
+                        <div class="slide-body">
+                            <h3>Deux salles, pour vous permettre de toujours progresser.</h3>
+                            <p>Notre seconde salle est dédiée à nos cours de spécialité : gymnastique, haltérophilie, renforcement musculaire ou cardio. C'est l'endroit idéal pour affiner votre technique. Elle est également disponible en Free Access pour vos entraînements autonomes.</p>
+                        </div>
                     </div>
 
                     <div class="slide">
                         <img src="resources/images/others/box.png" alt="" loading="lazy">
-                        <h3>Des coachs qui croient en vous.</h3>
-                        <p>Nos coachs sont vos partenaires de progression. Diplômés et passionnés, ils assurent votre sécurité, adaptent chaque effort à vos capacités et vous donnent la motivation nécessaire pour atteindre vos objectifs.</p>
+                        <div class="slide-body">
+                            <h3>Des coachs qui croient en vous.</h3>
+                            <p>Nos coachs sont vos partenaires de progression. Diplômés et passionnés, ils assurent votre sécurité, adaptent chaque effort à vos capacités et vous donnent la motivation nécessaire pour atteindre vos objectifs.</p>
+                        </div>
                     </div>
                 </div>
                 
@@ -228,12 +256,12 @@
     </section>
 
     <!-- EQUIPE -->
-    <section id="equipe" class="section section-team js-reveal" aria-labelledby="team-title">
+    <section id="equipe" class="section section-team" aria-labelledby="team-title">
     <div class="container">
         <h2 id="team-title">L’équipe</h2>
 
         <div class="team-grid" role="list">
-            <article class="coach-card" role="listitem">
+            <article class="coach-card js-reveal" role="listitem">
                 <img src="resources/images/coaches/coach-4.jpg" alt="Photo de Jérémy, Head Coach CrossFit Armorica" loading="lazy" class="coach-photo">
                 <div class="coach-body">
                     <h3>Jérémy – Head Coach</h3>
@@ -242,14 +270,32 @@
                         <br>
                         <p>J’ai hâte de vous retrouver à la box avec mon équipe !</p>
                     </div>
-                    <button class="coach-toggle btn btn-primary btn-full exempt" 
-                        type="button" 
-                        aria-expanded="false" 
-                        aria-controls="coach-1-text">Lire la suite</button>
+                </div>
+                <div class="movement-fav">
+                    <div class="mov-header">
+                        <span class="movement-icon">
+                            <i class="fas fa-thumbs-up"></i>
+                        </span>
+                        <p>Mouvement préféré</p>
+                    </div>
+                    <div class="mov-body">
+                        <p>Le clean</p>
+                    </div>
+                </div>
+                <div class="movement-nonfav">
+                    <div class="mov-header">
+                        <span class="movement-icon">
+                            <i class="fas fa-thumbs-down"></i>
+                        </span>
+                        <p>Mouvement détesté</p>
+                    </div>
+                    <div class="mov-body">
+                        <p>Les HSPU</p>
+                    </div>
                 </div>
             </article>
 
-            <article class="coach-card" role="listitem">
+            <article class="coach-card js-reveal" role="listitem">
                 <img src="resources/images/coaches/coach-2.jpg" alt="Photo de Chloé, coach CrossFit Armorica" loading="lazy" class="coach-photo">
                 <div class="coach-body">
                     <h3>Chloé – Coach</h3>
@@ -258,14 +304,32 @@
                         <br>
                         <p>Hâte de vous retrouver à la box !</p>
                     </div>
-                    <button class="coach-toggle btn btn-primary btn-full exempt" 
-                        type="button" 
-                        aria-expanded="false" 
-                        aria-controls="coach-2-text">Lire la suite</button>
+                </div>
+                <div class="movement-fav">
+                    <div class="mov-header">
+                        <span class="movement-icon">
+                            <i class="fas fa-thumbs-up"></i>
+                        </span>
+                        <p>Mouvement préféré</p>
+                    </div>
+                    <div class="mov-body">
+                        <p>Le Squat Snatch</p>
+                    </div>
+                </div>
+                <div class="movement-nonfav">
+                    <div class="mov-header">
+                        <span class="movement-icon">
+                            <i class="fas fa-thumbs-down"></i>
+                        </span>
+                        <p>Mouvement détesté</p>
+                    </div>
+                    <div class="mov-body">
+                        <p>Les Ring Muscle-Up</p>
+                    </div>
                 </div>
             </article>
 
-            <article class="coach-card" role="listitem">
+            <article class="coach-card js-reveal" role="listitem">
                 <img src="resources/images/coaches/coach-3.jpg" alt="Photo d'Arthur, coach CrossFit Armorica" loading="lazy" class="coach-photo">
                 <div class="coach-body">
                     <h3>Arthur – Coach</h3>
@@ -273,14 +337,32 @@
                         <p>J’ai toujours vécu au rythme du sport. Ancien skieur de haut niveau, j’ai mis un terme à ma carrière pour poursuivre mes études puis travailler sur les marchés financiers entre 2016 et 2021. C’est durant cette période que j’ai découvert le CrossFit… et ça a été une révélation. Ma passion pour le sport est devenue une passion pour la transmission. Aujourd’hui owner de CrossFit Lannion, j’interviens encore régulièrement chez CrossFit Armorica. J’y retrouve une équipe d’amis et de professionnels exigeants, ainsi que la joie de partager ce qui m’anime : le mouvement, la santé et la progression accessible à tous.</p>
                         <p>Egalement, pratiquant de trail, je suis convaincu que chacun peut soigner ses douleurs, devenir plus performant, plus mobile et plus confiant grâce à une pratique encadrée, cohérente et adaptée.</p>
                     </div>
-                    <button class="coach-toggle btn btn-primary btn-full exempt" 
-                        type="button" 
-                        aria-expanded="false" 
-                        aria-controls="coach-3-text">Lire la suite</button>
+                </div>
+                <div class="movement-fav">
+                    <div class="mov-header">
+                        <span class="movement-icon">
+                            <i class="fas fa-thumbs-up"></i>
+                        </span>
+                        <p>Mouvement préféré</p>
+                    </div>
+                    <div class="mov-body">
+                        <p>Le Squat Clean</p>
+                    </div>
+                </div>
+                <div class="movement-nonfav">
+                    <div class="mov-header">
+                        <span class="movement-icon">
+                            <i class="fas fa-thumbs-down"></i>
+                        </span>
+                        <p>Mouvement détesté</p>
+                    </div>
+                    <div class="mov-body">
+                        <p>Les Strict HSPU</p>
+                    </div>
                 </div>
             </article>
             
-            <article class="coach-card" role="listitem">
+            <article class="coach-card js-reveal" role="listitem">
                 <img src="resources/images/coaches/coach-1.jpg" alt="Photo de Gautier, coach CrossFit Armorica" loading="lazy" class="coach-photo">
                 <div class="coach-body">
                     <h3>Gautier – Coach</h3>
@@ -290,10 +372,28 @@
                         <br>
                         <p>Hâte de vous retrouver à la box pour vous aider à vous sentir mieux !</p>
                     </div>
-                    <button class="coach-toggle btn btn-primary btn-full exempt" 
-                        type="button" 
-                        aria-expanded="false" 
-                        aria-controls="coach-4-text">Lire la suite</button>
+                </div>
+                <div class="movement-fav">
+                    <div class="mov-header">
+                        <span class="movement-icon">
+                            <i class="fas fa-thumbs-up"></i>
+                        </span>
+                        <p>Mouvement préféré</p>
+                    </div>
+                    <div class="mov-body">
+                        <p>Le Squat Snatch</p>
+                    </div>
+                </div>
+                <div class="movement-nonfav">
+                    <div class="mov-header">
+                        <span class="movement-icon">
+                            <i class="fas fa-thumbs-down"></i>
+                        </span>
+                        <p>Mouvement détesté</p>
+                    </div>
+                    <div class="mov-body">
+                        <p>Les Double Unders</p>
+                    </div>
                 </div>
             </article>
         </div>
@@ -306,11 +406,13 @@
             <h2 id="planning-title">Horaires</h2>
             <p class="section-intro">Des créneaux matin, midi et soir pour s’adapter à votre emploi du temps. Les WOD durent 1 heure, échauffement et mobilité inclus.</p>
             <article class="card-planning" role="listitem" aria-label="Horaires d’ouverture">
-                <p>Lundi – Vendredi : 10h-13h30 / 16h00-21h00</p>
-                <p>Samedi : 9h15-12h15 / 13h00-15h00</p>
-                <p>Fermé les dimanches.</p>
+                <p class="label-highlight">Lundi – Vendredi :</p>
+                <p>10h-13h30 / 16h00-21h00</p>
+                <p class="label-highlight">Samedi :</p>
+                <p>9h15-12h15 / 13h00-15h00</p>
+                <p class="label-highlight">Dimanche :</p>
+                <p>Fermé</p>
             </article>
-            <p class="planning-note">Les places étant limitées, la réservation se fait via notre application partenaire.</p>
         </div>
     </section>
 
@@ -386,20 +488,20 @@
             </p>
         </section>
 
-    <section class="footer-block" aria-label="Horaires d’ouverture">
-        <h2 class="footer-title">Horaires</h2>
-        <p>Lundi – Vendredi : 10h-13h30 / 16h00-21h00</p>
-        <p>Samedi : 9h15-12h15 / 13h00-15h00</p>
-        <p>Fermé les dimanches.</p>
-    </section>
+        <section class="footer-block" aria-label="Horaires d’ouverture">
+            <h2 class="footer-title">Horaires</h2>
+            <p>Lundi – Vendredi : 10h-13h30 / 16h00-21h00</p>
+            <p>Samedi : 9h15-12h15 / 13h00-15h00</p>
+            <p>Fermé les dimanches.</p>
+        </section>
 
-    <section class="footer-block footer-social" aria-label="Réseaux sociaux CrossFit Armorica">
-        <h2 class="footer-title">Suivez la box</h2>
-        <ul class="social-links">
-            <li><a href="https://www.instagram.com/crossfitarmorica/" aria-label="Instagram de CrossFit Armorica"><i class="fa-brands fa-instagram"></i></a></li>
-            <li><a href="https://www.facebook.com/crossfitarmorica/" aria-label="Facebook de CrossFit Armorica"><i class="fa-brands fa-facebook"></i></a></li>
-        </ul>
-    </section>
+        <section class="footer-block footer-social" aria-label="Réseaux sociaux CrossFit Armorica">
+            <h2 class="footer-title">Suivez la box</h2>
+            <ul class="social-links">
+                <li><a href="https://www.instagram.com/crossfitarmorica/" aria-label="Instagram de CrossFit Armorica"><i class="fa-brands fa-instagram"></i></a></li>
+                <li><a href="https://www.facebook.com/crossfitarmorica/" aria-label="Facebook de CrossFit Armorica"><i class="fa-brands fa-facebook"></i></a></li>
+            </ul>
+        </section>
     </div>
 
     <div class="footer-bottom">
