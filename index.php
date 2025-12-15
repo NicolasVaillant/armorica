@@ -95,6 +95,7 @@
     <ul>
         <li><a href="#decouverte">Découvrir la box</a></li>
         <li><a href="#etapes-debuter">Comment débuter ?</a></li>
+        <li><a href="#members">Nos adhérents en parlent</a></li>
         <li><a href="#equipe">L’équipe</a></li>
         <li><a href="#planning">Horaires</a></li>
         <li><a href="#faq">FAQ</a></li>
@@ -261,149 +262,198 @@
         </div>
     </section>
 
-    <!-- EQUIPE -->
-    <section id="equipe" class="section section-team" aria-labelledby="team-title">
-    <div class="container">
-        <h2 id="team-title">L’équipe</h2>
 
-        <div class="team-grid" role="list">
-            <article class="coach-card js-reveal" role="listitem">
-                <img src="resources/images/coaches/coach-4.jpg" alt="Photo de Jérémy, Head Coach CrossFit Armorica" loading="lazy" class="coach-photo">
-                <div class="coach-body">
-                    <h3>Jérémy – Head Coach</h3>
-                    <div class="coach-text" id="coach-1-text">
-                        <p>Issu d’un domaine professionnel totalement different  j’ai pu pratiquer en loisir la musculation et le Viet Vo Dao. En plus de ma pratique  personnel j’ai pu découvrir le coaching et l’accompagnement des personnes dans leurs objectifs ce qui m’a donné envie d’ne faire mon métier en ayant découvert le CrossFit. J’ai repris mes études à 31 ans  afin d’obtenir mon bpjeps et suite à cela j’ai ouvert ma propre salle à Plérin afin d’accompagner le plus de gens possible dans leurs objectifs et diffuser notre vision du bien être et de la bonne santé par le sport. Que cela soit pour la compétition ou pour se sentir mieux dans son quotidien.</p>
-                        <br>
-                        <p>J’ai hâte de vous retrouver à la box avec mon équipe !</p>
-                    </div>
-                </div>
-                <div class="movement-fav">
-                    <div class="mov-header">
-                        <span class="movement-icon">
-                            <i class="fas fa-thumbs-up"></i>
-                        </span>
-                        <p>Mouvement préféré</p>
-                    </div>
-                    <div class="mov-body">
-                        <p>Le clean</p>
-                    </div>
-                </div>
-                <div class="movement-nonfav">
-                    <div class="mov-header">
-                        <span class="movement-icon">
-                            <i class="fas fa-thumbs-down"></i>
-                        </span>
-                        <p>Mouvement détesté</p>
-                    </div>
-                    <div class="mov-body">
-                        <p>Les HSPU</p>
-                    </div>
-                </div>
-            </article>
+    <section id="members" class="section section-testimony js-reveal" aria-labelledby="testimony-title">
+        <div class="container">
+            <h2 id="testimony-title">Témoignages de nos adhérents</h2>
 
-            <article class="coach-card js-reveal" role="listitem">
-                <img src="resources/images/coaches/coach-2.jpg" alt="Photo de Chloé, coach CrossFit Armorica" loading="lazy" class="coach-photo">
-                <div class="coach-body">
-                    <h3>Chloé – Coach</h3>
-                    <div class="coach-text" id="coach-2-text">
-                        <p>Ancienne gymnaste  j’ai redécouvert le sport en 2017 grâce au CrossFit, jusqu’à devenir coach en 2024. Mes forces : j’ai vécu le surpoids, j’ai été très sédentaire, et j’ai aussi connu la compétition. Cette expérience variée me permet d’accompagner aussi bien les objectifs santé que la performance. Depuis un an, je me spécialise dans la santé féminine (cycle, sommeil, postpartum). À la box, je propose : du coaching de groupe, du coaching individuel pour progresser dans un domaine précis, et un accompagnement dédié aux femmes.</p>
-                        <br>
-                        <p>Hâte de vous retrouver à la box !</p>
+            <div class="member-grid" role="list">
+                <article class="member-card js-reveal" role="listitem">
+                    <img src="resources/images/users/member-1.png" alt="Vincent, adhérent de CrossFit Armorica, nous raconte pourquoi il apprécie venir s'entraîner à la salle." loading="lazy" class="member-photo">
+                    <div class="member-body">
+                        <h3>Vincent, 65 ans</h3>
+                        <div class="member-text">
+                            <p>Les exercices à chaque fois sont adaptés à ton niveau, le coach te donne des exercices que tu es capable de faire, on s'adapte, et on progresse comme ça. Je vous invite vraiment à venir, on s'amuse, c'est jamais pareil et l'ambiance et très bonne !</p>
+                        </div>
                     </div>
-                </div>
-                <div class="movement-fav">
-                    <div class="mov-header">
-                        <span class="movement-icon">
-                            <i class="fas fa-thumbs-up"></i>
-                        </span>
-                        <p>Mouvement préféré</p>
+                </article>
+                
+                <article class="member-card js-reveal" role="listitem">
+                    <img src="resources/images/users/member-2.jpg" alt="Typhanie, adhérente de CrossFit Armorica, nous raconte pourquoi elle apprécie venir s'entraîner à la salle." loading="lazy" class="member-photo">
+                    <div class="member-body">
+                        <h3>Typhanie, 34 ans</h3>
+                        <div class="member-text">
+                            <p>Le plus gros changement c’est que enfin j’ai pris du plaisir dans le sport, que j’y suis restée inscrite et que j’y allais de plus en plus, je me suis vue progresser et ça m’a motivé. Le vrai point fort c'est l'ambiance, les coachs et les adhérents, tout le monde est bienveillant, ca créé un super collectif.</p>
+                        </div>
                     </div>
-                    <div class="mov-body">
-                        <p>Le Squat Snatch</p>
+                </article>
+                
+                <article class="member-card js-reveal" role="listitem">
+                    <img src="resources/images/users/member-3.jpg" alt="Francois, adhérent de CrossFit Armorica, nous raconte pourquoi il apprécie venir s'entraîner à la salle." loading="lazy" class="member-photo">
+                    <div class="member-body">
+                        <h3>Francois, 31 ans</h3>
+                        <div class="member-text">
+                            <p>Avant CrossFit Armorica, j'avais arrêté le sport 2 ans après une blessure et appréhendais beaucoup la reprise. J'ai trouvé ici une ambiance incroyable : les coachs et les adhérents m'ont accompagnée et encouragée, même avec mes contraintes. Le résultat ? Je n'ai plus de douleur en marchant ou en montant les escaliers. C'est le moment parfait pour déconnecter et s'amuser !</p>
+                        </div>
                     </div>
-                </div>
-                <div class="movement-nonfav">
-                    <div class="mov-header">
-                        <span class="movement-icon">
-                            <i class="fas fa-thumbs-down"></i>
-                        </span>
-                        <p>Mouvement détesté</p>
+                </article>
+                
+                <article class="member-card js-reveal" role="listitem">
+                    <img src="resources/images/users/member-4.jpg" alt="Aude, adhérente de CrossFit Armorica, nous raconte pourquoi elle apprécie venir s'entraîner à la salle." loading="lazy" class="member-photo">
+                    <div class="member-body">
+                        <h3>Aude, 29 ans</h3>
+                        <div class="member-text">
+                            <p>Grâce à CrossFit Armorica, ma grossesse a été synonyme de forme et d'énergie jusqu'au bout ! Les séances étaient parfaitement adaptées, et les coachs incroyablement attentifs. J'ai aussi bénéficié d'une récupération post-accouchement rapide. Plus globalement, le CrossFit a transformé ma condition physique et me permet de me vider la tête à chaque séance. Je recommande vraiment cette box : c'est fun, convivial et super motivant !</p>
+                        </div>
                     </div>
-                    <div class="mov-body">
-                        <p>Les Ring Muscle-Up</p>
-                    </div>
-                </div>
-            </article>
+                </article>
 
-            <article class="coach-card js-reveal" role="listitem">
-                <img src="resources/images/coaches/coach-3.jpg" alt="Photo d'Arthur, coach CrossFit Armorica" loading="lazy" class="coach-photo">
-                <div class="coach-body">
-                    <h3>Arthur – Coach</h3>
-                    <div class="coach-text" id="coach-3-text">
-                        <p>J’ai toujours vécu au rythme du sport. Ancien skieur de haut niveau, j’ai mis un terme à ma carrière pour poursuivre mes études puis travailler sur les marchés financiers entre 2016 et 2021. C’est durant cette période que j’ai découvert le CrossFit… et ça a été une révélation. Ma passion pour le sport est devenue une passion pour la transmission. Aujourd’hui owner de CrossFit Lannion, j’interviens encore régulièrement chez CrossFit Armorica. J’y retrouve une équipe d’amis et de professionnels exigeants, ainsi que la joie de partager ce qui m’anime : le mouvement, la santé et la progression accessible à tous.</p>
-                        <p>Egalement, pratiquant de trail, je suis convaincu que chacun peut soigner ses douleurs, devenir plus performant, plus mobile et plus confiant grâce à une pratique encadrée, cohérente et adaptée.</p>
-                    </div>
-                </div>
-                <div class="movement-fav">
-                    <div class="mov-header">
-                        <span class="movement-icon">
-                            <i class="fas fa-thumbs-up"></i>
-                        </span>
-                        <p>Mouvement préféré</p>
-                    </div>
-                    <div class="mov-body">
-                        <p>Le Squat Clean</p>
-                    </div>
-                </div>
-                <div class="movement-nonfav">
-                    <div class="mov-header">
-                        <span class="movement-icon">
-                            <i class="fas fa-thumbs-down"></i>
-                        </span>
-                        <p>Mouvement détesté</p>
-                    </div>
-                    <div class="mov-body">
-                        <p>Les Strict HSPU</p>
-                    </div>
-                </div>
-            </article>
-            
-            <article class="coach-card js-reveal" role="listitem">
-                <img src="resources/images/coaches/coach-1.jpg" alt="Photo de Gautier, coach CrossFit Armorica" loading="lazy" class="coach-photo">
-                <div class="coach-body">
-                    <h3>Gautier – Coach</h3>
-                    <div class="coach-text" id="coach-4-text">
-                        <p>Sportif depuis toujours (karaté, kitesurf, parapente, hockey, musculation...), Lorsque j'ai découvert le CrossFit, j'ai tout de suite aimé sa polyvalence – impossible de s'ennuyer – et surtout l'ambiance de la box ! Ca ma tout de suite donné envie de faire ce dont j'ai toujours eu envie, coacher et transmettre ma passion.</p>
-                        <p>Mon rôle : vous accompagner, en groupe ou en individuel, pour améliorer votre santé physique et mentale, en faisant de l'entraînement un plaisir, jamais une contrainte. La bonne humeur et la technique sont mes priorités pour une progression sûre.</p>
-                        <br>
-                        <p>Hâte de vous retrouver à la box pour vous aider à vous sentir mieux !</p>
-                    </div>
-                </div>
-                <div class="movement-fav">
-                    <div class="mov-header">
-                        <span class="movement-icon">
-                            <i class="fas fa-thumbs-up"></i>
-                        </span>
-                        <p>Mouvement préféré</p>
-                    </div>
-                    <div class="mov-body">
-                        <p>Le Squat Snatch</p>
-                    </div>
-                </div>
-                <div class="movement-nonfav">
-                    <div class="mov-header">
-                        <span class="movement-icon">
-                            <i class="fas fa-thumbs-down"></i>
-                        </span>
-                        <p>Mouvement détesté</p>
-                    </div>
-                    <div class="mov-body">
-                        <p>Les Double Unders</p>
-                    </div>
-                </div>
-            </article>
+            </div>
         </div>
-    </div>
+    </section>
+
+    <section id="equipe" class="section section-team" aria-labelledby="team-title">
+        <div class="container">
+            <h2 id="team-title">L’équipe</h2>
+
+            <div class="team-grid" role="list">
+                <article class="coach-card js-reveal" role="listitem">
+                    <img src="resources/images/coaches/coach-4.jpg" alt="Photo de Jérémy, Head Coach CrossFit Armorica" loading="lazy" class="coach-photo">
+                    <div class="coach-body">
+                        <h3>Jérémy – Head Coach</h3>
+                        <div class="coach-text" id="coach-1-text">
+                            <p>Issu d’un domaine professionnel totalement different  j’ai pu pratiquer en loisir la musculation et le Viet Vo Dao. En plus de ma pratique  personnel j’ai pu découvrir le coaching et l’accompagnement des personnes dans leurs objectifs ce qui m’a donné envie d’ne faire mon métier en ayant découvert le CrossFit. J’ai repris mes études à 31 ans  afin d’obtenir mon bpjeps et suite à cela j’ai ouvert ma propre salle à Plérin afin d’accompagner le plus de gens possible dans leurs objectifs et diffuser notre vision du bien être et de la bonne santé par le sport. Que cela soit pour la compétition ou pour se sentir mieux dans son quotidien.</p>
+                            <br>
+                            <p>J’ai hâte de vous retrouver à la box avec mon équipe !</p>
+                        </div>
+                    </div>
+                    <div class="movement-fav">
+                        <div class="mov-header">
+                            <span class="movement-icon">
+                                <i class="fas fa-thumbs-up"></i>
+                            </span>
+                            <p>Mouvement préféré</p>
+                        </div>
+                        <div class="mov-body">
+                            <p>Le clean</p>
+                        </div>
+                    </div>
+                    <div class="movement-nonfav">
+                        <div class="mov-header">
+                            <span class="movement-icon">
+                                <i class="fas fa-thumbs-down"></i>
+                            </span>
+                            <p>Mouvement détesté</p>
+                        </div>
+                        <div class="mov-body">
+                            <p>Les HSPU</p>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="coach-card js-reveal" role="listitem">
+                    <img src="resources/images/coaches/coach-2.jpg" alt="Photo de Chloé, coach CrossFit Armorica" loading="lazy" class="coach-photo">
+                    <div class="coach-body">
+                        <h3>Chloé – Coach</h3>
+                        <div class="coach-text" id="coach-2-text">
+                            <p>Ancienne gymnaste  j’ai redécouvert le sport en 2017 grâce au CrossFit, jusqu’à devenir coach en 2024. Mes forces : j’ai vécu le surpoids, j’ai été très sédentaire, et j’ai aussi connu la compétition. Cette expérience variée me permet d’accompagner aussi bien les objectifs santé que la performance. Depuis un an, je me spécialise dans la santé féminine (cycle, sommeil, postpartum). À la box, je propose : du coaching de groupe, du coaching individuel pour progresser dans un domaine précis, et un accompagnement dédié aux femmes.</p>
+                            <br>
+                            <p>Hâte de vous retrouver à la box !</p>
+                        </div>
+                    </div>
+                    <div class="movement-fav">
+                        <div class="mov-header">
+                            <span class="movement-icon">
+                                <i class="fas fa-thumbs-up"></i>
+                            </span>
+                            <p>Mouvement préféré</p>
+                        </div>
+                        <div class="mov-body">
+                            <p>Le Squat Snatch</p>
+                        </div>
+                    </div>
+                    <div class="movement-nonfav">
+                        <div class="mov-header">
+                            <span class="movement-icon">
+                                <i class="fas fa-thumbs-down"></i>
+                            </span>
+                            <p>Mouvement détesté</p>
+                        </div>
+                        <div class="mov-body">
+                            <p>Les Ring Muscle-Up</p>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="coach-card js-reveal" role="listitem">
+                    <img src="resources/images/coaches/coach-3.jpg" alt="Photo d'Arthur, coach CrossFit Armorica" loading="lazy" class="coach-photo">
+                    <div class="coach-body">
+                        <h3>Arthur – Coach</h3>
+                        <div class="coach-text" id="coach-3-text">
+                            <p>J’ai toujours vécu au rythme du sport. Ancien skieur de haut niveau, j’ai mis un terme à ma carrière pour poursuivre mes études puis travailler sur les marchés financiers entre 2016 et 2021. C’est durant cette période que j’ai découvert le CrossFit… et ça a été une révélation. Ma passion pour le sport est devenue une passion pour la transmission. Aujourd’hui owner de CrossFit Lannion, j’interviens encore régulièrement chez CrossFit Armorica. J’y retrouve une équipe d’amis et de professionnels exigeants, ainsi que la joie de partager ce qui m’anime : le mouvement, la santé et la progression accessible à tous.</p>
+                            <p>Egalement, pratiquant de trail, je suis convaincu que chacun peut soigner ses douleurs, devenir plus performant, plus mobile et plus confiant grâce à une pratique encadrée, cohérente et adaptée.</p>
+                        </div>
+                    </div>
+                    <div class="movement-fav">
+                        <div class="mov-header">
+                            <span class="movement-icon">
+                                <i class="fas fa-thumbs-up"></i>
+                            </span>
+                            <p>Mouvement préféré</p>
+                        </div>
+                        <div class="mov-body">
+                            <p>Le Squat Clean</p>
+                        </div>
+                    </div>
+                    <div class="movement-nonfav">
+                        <div class="mov-header">
+                            <span class="movement-icon">
+                                <i class="fas fa-thumbs-down"></i>
+                            </span>
+                            <p>Mouvement détesté</p>
+                        </div>
+                        <div class="mov-body">
+                            <p>Les Strict HSPU</p>
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="coach-card js-reveal" role="listitem">
+                    <img src="resources/images/coaches/coach-1.jpg" alt="Photo de Gautier, coach CrossFit Armorica" loading="lazy" class="coach-photo">
+                    <div class="coach-body">
+                        <h3>Gautier – Coach</h3>
+                        <div class="coach-text" id="coach-4-text">
+                            <p>Sportif depuis toujours (karaté, kitesurf, parapente, hockey, musculation...), Lorsque j'ai découvert le CrossFit, j'ai tout de suite aimé sa polyvalence – impossible de s'ennuyer – et surtout l'ambiance de la box ! Ca ma tout de suite donné envie de faire ce dont j'ai toujours eu envie, coacher et transmettre ma passion.</p>
+                            <p>Mon rôle : vous accompagner, en groupe ou en individuel, pour améliorer votre santé physique et mentale, en faisant de l'entraînement un plaisir, jamais une contrainte. La bonne humeur et la technique sont mes priorités pour une progression sûre.</p>
+                            <br>
+                            <p>Hâte de vous retrouver à la box pour vous aider à vous sentir mieux !</p>
+                        </div>
+                    </div>
+                    <div class="movement-fav">
+                        <div class="mov-header">
+                            <span class="movement-icon">
+                                <i class="fas fa-thumbs-up"></i>
+                            </span>
+                            <p>Mouvement préféré</p>
+                        </div>
+                        <div class="mov-body">
+                            <p>Le Squat Snatch</p>
+                        </div>
+                    </div>
+                    <div class="movement-nonfav">
+                        <div class="mov-header">
+                            <span class="movement-icon">
+                                <i class="fas fa-thumbs-down"></i>
+                            </span>
+                            <p>Mouvement détesté</p>
+                        </div>
+                        <div class="mov-body">
+                            <p>Les Double Unders</p>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
     </section>
 
     <!-- PLANNING -->

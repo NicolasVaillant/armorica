@@ -837,10 +837,8 @@ h2{line-height: $line-height-title}
   display: grid;
   gap: 1.5rem;
   margin: 1.5rem 0;
-
-  @media (min-width: $break-md) {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
+  @media (min-width: $break-md) {grid-template-columns: repeat(2, minmax(0, 1fr))}
+  @media (min-width: $break-lg) {grid-template-columns: repeat(3, minmax(0, 1fr))}
 }
 
 .coach-card {
@@ -913,6 +911,56 @@ h2{line-height: $line-height-title}
   padding: 0 0.75rem 0.75rem;
   color: #fff;
   font-weight: 600;
+}
+
+// ======================
+// Témoignages
+// ======================
+
+.member-grid {
+  display: grid;
+  gap: 1.5rem;
+  margin: 1.5rem 0;
+  @media (min-width: $break-md) {grid-template-columns: repeat(2, minmax(0, 1fr))}
+  @media (min-width: $break-lg) {grid-template-columns: repeat(3, minmax(0, 1fr))}
+}
+
+.member-card {
+  border-radius: $radius-lg;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: fit-content;
+  background-color: #ffffff;
+  padding: 1.4rem 1.3rem;
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.06);
+  border: 1px solid rgba($color-border, 0.9);
+  text-align: center;
+}
+
+.member-body {
+  padding: 1.2rem 0;
+
+  h3 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    font-size: 1.05rem;
+  }
+
+  p {
+    margin: 0;
+    font-size: 0.96rem;
+  }
+}
+
+.member-photo{
+  aspect-ratio: 1;
+  width: 60%;
+  border-radius: 500%;
+  height: auto;
+  margin: 1.15rem auto 0;
+  object-fit: cover;
+  max-width: 200px;
 }
 
 // ======================
@@ -1033,13 +1081,13 @@ h2{line-height: $line-height-title}
 }
 
 .footer-grid {
-    display: grid;
-    gap: 2rem;
-    padding-block: 2.5rem;
+  display: grid;
+  gap: 2rem;
+  padding-block: 2.5rem;
 
-    @media (min-width: $break-md) {grid-template-columns: repeat(3, minmax(0, 1fr))}
+  @media (min-width: $break-md) {grid-template-columns: repeat(3, minmax(0, 1fr))}
 
-    section p{color: $color-text-grey}
+  section p{color: $color-text-grey}
 }
 
 .footer-title {
