@@ -4,17 +4,17 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>CrossFit Armorica – La communauté qui vous fait évoluer</title>
-    <meta name="description" content="Découvrez CrossFit Armorica, une salle de CrossFit conviviale et encadrée par des coachs diplômés. Réservez votre séance d’essai gratuite et démarrez  votre aventure." />
+    <meta name="description" content="CrossFit Armorica, votre box de CrossFit à Plérin, vous accueille avec une équipe de coachs certifiés et à votre écoute. Rejoignez-nous pour retrouver forme et santé dans une ambiance fun et bienveillante." />
     <meta name="robots" content="index,follow" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="CrossFit Armorica – La communauté qui vous fait évoluer" />
     <meta property="og:description" content="Séances encadrées, communauté bienveillante et programmation adaptée à tous les niveaux. Réservez votre séance d’essai gratuite." />
-    <meta property="og:url" content="https://www.crossfitarmorica.fr/" />
-    <meta property="og:image" content="https://www.crossfitarmorica.fr/resources/images/logo/logo-crossfit-armorica.png" />
+    <meta property="og:url" content="https://www.crossfitarmorica.com/" />
+    <meta property="og:image" content="https://www.crossfitarmorica.com/resources/images/others/home-crossfit-armorica.png" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="CrossFit Armorica – La communauté qui vous fait évoluer" />
-    <meta name="twitter:description" content="Rejoignez une salle de CrossFit chaleureuse, structurée et accessible, même si vous débutez." />
-    <link rel="canonical" href="https://www.crossfitarmorica.fr/" />
+    <meta name="twitter:description" content="CrossFit Armorica, votre box de CrossFit à Plérin, vous accueille avec une équipe de coachs certifiés et à votre écoute. Rejoignez-nous pour retrouver forme et santé dans une ambiance fun et bienveillante. " />
+    <link rel="canonical" href="https://www.crossfitarmorica.com/" />
 
     <link type="image/x-icon" rel="icon" href="resources/images/logo/favicon.ico">
 
@@ -34,12 +34,12 @@
         "@context": "https://schema.org",
         "@type": "SportsActivityLocation",
         "name": "CrossFit Armorica",
-        "description": "Salle de CrossFit conviviale proposant des entraînements encadrés pour tous les niveaux.",
-        "url": "https://www.crossfitarmorica.fr/",
+        "description": "CrossFit Armorica, votre box de CrossFit à Plérin, vous accueille avec une équipe de coachs certifiés et à votre écoute. Rejoignez-nous pour retrouver forme et santé dans une ambiance fun et bienveillante.",
+        "url": "https://www.crossfitarmorica.com/",
         "telephone": "+33-6-76-22-99-26",
         "address": {
             "@type": "PostalAddress",
-            "streetAddress": "1, rue Claude Bernard ",
+            "streetAddress": "1, rue Claude Bernard",
             "addressLocality": "Plérin",
             "postalCode": "22190",
             "addressCountry": "FR"
@@ -71,9 +71,9 @@
     <div class="container header-inner">
         <nav class="main-nav" aria-label="Navigation principale">
             <a href="#top" class="logo" aria-label="Retour à l’accueil CrossFit Armorica">
-                <img src="resources/images/logo/logo-crossfit-armorica.png" alt="Logo CrossFit Armorica" loading="lazy">
+                <img src="resources/images/logo/logo-crossfit-armorica.png" alt="Logo de CrossFit Armorica" loading="lazy">
             </a>
-            <ul class="nav-links">
+            <ul class="nav-links" aria-label="Navigation principale">
                 <li><a href="#decouverte">Découvrir la box</a></li>
                 <li><a href="#etapes-debuter">Comment débuter ?</a></li>
                 <li><a href="#equipe">L’équipe</a></li>
@@ -100,7 +100,7 @@
         <li><a href="#planning">Horaires</a></li>
         <li><a href="#faq">FAQ</a></li>
         <li class="mobile-cta">
-        <a class="btn btn-primary btn-full" href="#seance-essai">Séance d’essai</a>
+        <a class="btn btn-primary btn-full" href="#seance-essai">Je réserve ma séance</a>
         </li>
     </ul>
 </nav>
@@ -108,8 +108,7 @@
 <main id="contenu-principal">
 
     <section id="top" class="hero" aria-labelledby="hero-title">
-        <div class="hero-media" role="img"
-            aria-label="Photo de groupe d’adhérents CrossFit en train de sourire après un entraînement">
+        <div class="hero-media" role="img" aria-label="Photo de groupe d’adhérents de CrossFit Armorica en train de sourire après un entraînement">
         </div>
         <div class="hero-overlay"></div>
         <div class="container hero-content">
@@ -148,13 +147,11 @@
                         <label for="message">Précisions (facultatif)</label>
                         <textarea id="message" name="message" rows="3" aria-label="Précisions sur votre demande" placeholder="Vous pouvez préciser vos disponibilités, vos objectifs, ou tout autre détail pertinent."></textarea>
                     </div>
-                    <!-- Honeypot (anti-spam) -->
                     <div style="position:absolute;left:-9999px" aria-hidden="true">
                         <label for="website">Website</label>
                         <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
                     </div>
-                    <button type="submit" class="btn btn-primary btn-full exempt">Envoyer ma demande</button>
-                    <!-- Accessible status messages -->
+                    <button type="submit" class="btn btn-primary btn-full exempt">Je profite de ma séance d'essai offerte</button>
                     <p class="form-note" id="form-status" role="status" aria-live="polite">Vos données ne sont utilisées que pour vous recontacter.</p>
                 </form>
             </aside>
@@ -207,7 +204,7 @@
                 </li>
             </ol>
             <div class="steps-cta">
-                <a class="btn btn-primary btn-full" href="#seance-essai">Commencez dès maintenant !</a>
+                <a class="btn btn-primary btn-full" href="#seance-essai">Je réserve ma séance offerte</a>
             </div>
         </div>
     </section>
@@ -224,6 +221,14 @@
                             <p>Chez CrossFit Armorica, nous croyons à la force du collectif. Vous ne rejoignez pas une salle, mais une communauté. Ici, chaque membre, du débutant à l'athlète confirmé, est encouragé, soutenu et célébré.</p>
                         </div>
                     </div>
+
+                    <div class="slide">
+                        <img src="resources/images/users/coaching.jpg" alt="Un coach de CrossFit Armorica en train de coacher une adhérente sur son mouvement d'haltérophilie" loading="lazy">
+                        <div class="slide-body">
+                            <h3>Des coachs qui croient en vous.</h3>
+                            <p>Nos coachs sont vos partenaires de progression. Diplômés et passionnés, ils assurent votre sécurité, adaptent chaque effort à vos capacités et vous donnent la motivation nécessaire pour atteindre vos objectifs.</p>
+                        </div>
+                    </div>
                     
                     <div class="slide">
                         <img src="resources/images/others/box.png" alt="Les écho bike et vélos de CrossFit Armorica" loading="lazy">
@@ -238,14 +243,6 @@
                         <div class="slide-body">
                             <h3>Deux salles, pour vous permettre de toujours progresser.</h3>
                             <p>Notre seconde salle est dédiée à nos cours de spécialité : gymnastique, haltérophilie, renforcement musculaire ou cardio. C'est l'endroit idéal pour affiner votre technique. Elle est également disponible en Free Access pour vos entraînements autonomes.</p>
-                        </div>
-                    </div>
-
-                    <div class="slide">
-                        <img src="resources/images/others/box.png" alt="" loading="lazy">
-                        <div class="slide-body">
-                            <h3>Des coachs qui croient en vous.</h3>
-                            <p>Nos coachs sont vos partenaires de progression. Diplômés et passionnés, ils assurent votre sécurité, adaptent chaque effort à vos capacités et vous donnent la motivation nécessaire pour atteindre vos objectifs.</p>
                         </div>
                     </div>
                 </div>
@@ -456,7 +453,6 @@
         </div>
     </section>
 
-    <!-- PLANNING -->
     <section id="planning" class="section section-planning js-reveal" aria-labelledby="planning-title">
         <div class="container">
             <h2 id="planning-title">Horaires</h2>
@@ -472,62 +468,61 @@
         </div>
     </section>
 
-    <!-- FAQ -->
     <section id="faq" class="section section-faq js-reveal" aria-labelledby="faq-title">
-    <div class="container">
-        <h2 id="faq-title">On répond à vos questions</h2>
-        <p class="section-intro">Anticiper et répondre aux dernières questions des prospects pour lever les freins.</p>
+        <div class="container">
+            <h2 id="faq-title">On répond à vos questions</h2>
+            <p class="section-intro">Anticiper et répondre aux dernières questions des prospects pour lever les freins.</p>
 
-        <div class="faq-list">
-            <details>
-                <summary>Qu'est ce que le CrossFit ?</summary>
-                <div class="faq-panel">
-                <p>Le CrossFit est un entraînement fonctionnel qui combine cardio, gymnastique et haltérophilie. Il est adaptable à tous les niveaux et a pour but d'améliorer votre forme physique générale et votre bien-être.</p>
-                </div>
-            </details>
+            <div class="faq-list">
+                <details>
+                    <summary>Qu'est ce que le CrossFit ?</summary>
+                    <div class="faq-panel">
+                        <p>Le CrossFit est un entraînement fonctionnel qui combine cardio, gymnastique et haltérophilie. Il est adaptable à tous les niveaux et a pour but d'améliorer votre forme physique générale et votre bien-être.</p>
+                    </div>
+                </details>
 
-            <details>
-                <summary>Est-ce que tout le monde peut faire du CrossFit ?</summary>
-                <div class="faq-panel">
-                <p>Bien sûr ! Notre force réside dans l'adaptation. Que vous soyez débutant, de retour de blessure ou sportif aguerri, nos coachs modifient chaque exercice pour vous permettre de progresser en toute sécurité et à votre rythme.</p>
-                </div>
-            </details>
+                <details>
+                    <summary>Est-ce que tout le monde peut faire du CrossFit ?</summary>
+                    <div class="faq-panel">
+                        <p>Bien sûr ! Notre force réside dans l'adaptation. Que vous soyez débutant, de retour de blessure ou sportif aguerri, nos coachs modifient chaque exercice pour vous permettre de progresser en toute sécurité et à votre rythme.</p>
+                    </div>
+                </details>
 
-            <details>
-                <summary>Ai-je besoin d'être en forme avant de commencer le CrossFit ?</summary>
-                <div class="faq-panel">
-                <p>Inutile d'être déjà en forme ! Le principe du CrossFit est justement de s'adapter à chacun. Les exercices sont personnalisés et progressifs, ce qui vous permet d'améliorer votre condition physique sans pré-requis, dès la première séance.</p>
-                </div>
-            </details>
+                <details>
+                    <summary>Ai-je besoin d'être en forme avant de commencer le CrossFit ?</summary>
+                    <div class="faq-panel">
+                        <p>Inutile d'être déjà en forme ! Le principe du CrossFit est justement de s'adapter à chacun. Les exercices sont personnalisés et progressifs, ce qui vous permet d'améliorer votre condition physique sans pré-requis, dès la première séance.</p>
+                    </div>
+                </details>
 
-            <details>
-                <summary>Est-ce que le CrossFit est dangereux ?</summary>
-                <div class="faq-panel">
-                <p>Non, si l'on est bien encadré et que l'on respecte son corps ! Nos coachs sont là pour vous enseigner les mouvements corrects et s'assurer que vous progressez en toute sécurité. La technique prime toujours sur la performance pour prévenir toute blessure.</p>
-                </div>
-            </details>
+                <details>
+                    <summary>Est-ce que le CrossFit est dangereux ?</summary>
+                    <div class="faq-panel">
+                        <p>Non, si l'on est bien encadré et que l'on respecte son corps ! Nos coachs sont là pour vous enseigner les mouvements corrects et s'assurer que vous progressez en toute sécurité. La technique prime toujours sur la performance pour prévenir toute blessure.</p>
+                    </div>
+                </details>
 
-            <details>
-                <summary>Quels sont les avantages du CrossFit par rapport à d'autres formes d'exercices ?</summary>
-                <div class="faq-panel">
-                <p>Le CrossFit se distingue par son approche globale : il développe simultanément force, cardio et agilité. La variété constante des entraînements maintient la motivation et l'esprit de communauté unique transforme l'effort en une expérience sociale enrichissante.</p>
-                </div>
-            </details>
+                <details>
+                    <summary>Quels sont les avantages du CrossFit par rapport à d'autres formes d'exercices ?</summary>
+                    <div class="faq-panel">
+                        <p>Le CrossFit se distingue par son approche globale : il développe simultanément force, cardio et agilité. La variété constante des entraînements maintient la motivation et l'esprit de communauté unique transforme l'effort en une expérience sociale enrichissante.</p>
+                    </div>
+                </details>
 
-            <details>
-                <summary>Comment puis-je commencer le CrossFit dans votre box ?</summary>
-                <div class="faq-panel">
-                <p>Démarrez facilement avec une séance d'essai offerte ! Inscrivez-vous en ligne, et notre équipe prendra le relais. Vous serez guidé(e) de A à Z : présentation, réponses à vos questions et accompagnement personnalisé pour débuter en toute confiance.</p>
-                </div>
-            </details>
+                <details>
+                    <summary>Comment puis-je commencer le CrossFit dans votre box ?</summary>
+                    <div class="faq-panel">
+                        <p>Démarrez facilement avec une séance d'essai offerte ! Inscrivez-vous en ligne, et notre équipe prendra le relais. Vous serez guidé(e) de A à Z : présentation, réponses à vos questions et accompagnement personnalisé pour débuter en toute confiance.</p>
+                    </div>
+                </details>
 
+            </div>
+
+            <div class="faq-cta">
+                <p>Vous avez une autre question ?</p>
+                <a class="btn btn-primary btn-full" href="#seance-essai">Je souhaite en parler avec un coach</a>
+            </div>
         </div>
-
-        <div class="faq-cta">
-        <p>Vous avez une autre question ?</p>
-        <a class="btn btn-primary btn-full" href="#seance-essai">Parlez-en avec un coach</a>
-        </div>
-    </div>
     </section>
 </main>
 
