@@ -457,7 +457,7 @@
         <div class="container">
             <h2 id="planning-title">Horaires</h2>
             <p class="section-intro">Des créneaux matin, midi et soir pour s’adapter à votre emploi du temps. Les WOD durent 1 heure, échauffement et mobilité inclus.</p>
-            <article class="card-planning" role="listitem" aria-label="Horaires d’ouverture">
+            <article class="card-planning" aria-label="Horaires d’ouverture">
                 <p class="label-highlight">Lundi – Vendredi :</p>
                 <p>10h-13h30 / 16h00-21h00</p>
                 <p class="label-highlight">Samedi :</p>
