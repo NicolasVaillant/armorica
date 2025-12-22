@@ -92,6 +92,11 @@ a {
   }
 }
 
+svg {
+  &.rotate{rotate: 180deg}
+  &.flip{transform: scaleX(-1)}
+}
+
 // ======================
 // Layout helpers
 // ======================
@@ -210,7 +215,6 @@ a {
   @media all and (max-width: 360px) {.btn{display: none}}
 }
 
-
 /* =========================
   Hamburger button
 ========================= */
@@ -226,6 +230,21 @@ a {
   color: $color-text!important;
   padding-right: 0!important;
   @media (min-width: $break-header) {display: none!important}
+  .burger-icon{
+    width: 1em;
+    height: 1em;
+    width: 2cap;
+    height: 2cap;
+
+    display: inline-block;
+    vertical-align: middle;
+
+    stroke: currentColor;
+    fill: none;
+    stroke-width: 2.5;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
 }
 
 /* =========================
@@ -334,7 +353,7 @@ a {
     color: $color-text-light;
     font-size: .8rem;
     font-weight: normal;
-    padding: .4rem .8rem;
+    padding: .4rem .6rem;
     line-height: 1;
 }
 
@@ -351,83 +370,9 @@ a {
   }
 }
 
-// ======================
-// HERO
-// ======================
-
-.hero {
-  position: relative;
-  min-height: calc(100svh - $header-height);
-  color: $color-text-light;
-  display: flex;
-  align-items: stretch;
-  overflow: hidden;
-}
-
-.hero-media {
-  position: absolute;
-  inset: 0;
-  background-image: url("../images/users/hero-crossfit-group.png");
-  background-size: cover;
-  background-position: center;
-  filter: brightness(0.55);
-}
-
-.hero-overlay {
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(circle at top, transparent, rgba($color-primary, 0.85));
-}
-
-.hero-content {
-  position: relative;
-  padding-block: 5rem 4rem;
-  max-width: 1120px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  align-items: flex-start;
-}
-
-.eyebrow {
-  text-transform: uppercase;
-  font-size: 0.8rem;
-  letter-spacing: 0.1em;
-  color: $color-text-grey;
-  margin-bottom: 0.6rem;
-}
-
-.hero h1 {
-  line-height: $line-height-title;
-  margin-bottom: 1rem;
-  margin-top: 0;
-  font-size: clamp(2.5rem, 8vw, 5.5rem);
-}
-
-.hero-text {
-  font-size: 1rem;
-  margin-bottom: 1.5rem;
-
-  @media (min-width: $break-md) {
-    font-size: 1.05rem;
-  }
-}
-
-.hero-cta {
-  display: flex;
-  flex-direction: column;
-  gap: 1em;
-  width: 100%;
-
-  .hero-note {
-    font-size: 0.9rem;
-    opacity: 0.9;
-  }
-}
-
 main {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 // ======================
@@ -610,6 +555,7 @@ h2{line-height: $line-height-title}
     font-size: 2rem;
     outline-offset: 2px;
     outline: 2px solid $color-secondary;
+    svg{width: 1.6em}
   }
 
   p {
@@ -905,6 +851,12 @@ h2{line-height: $line-height-title}
   gap: .5rem;
   padding: .75rem;
   font-size: 1.2rem;
+  .movement-icon{
+    svg{
+      height: 2cap;
+      aspect-ratio: 1;
+    }
+  }
 }
 
 .mov-body{
@@ -1121,9 +1073,11 @@ h2{line-height: $line-height-title}
 
     &:hover,
     &:focus-visible {
-        color: $color-secondary;
-        text-decoration: none;
+      color: $color-secondary;
+      text-decoration: none;
     }
+
+    svg{width: 1.6em}
   }
 }
 

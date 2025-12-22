@@ -57,6 +57,13 @@ a:hover, a:focus-visible {
     transform: none;
   }
 }
+svg.rotate {
+  rotate: 180deg;
+}
+svg.flip {
+  transform: scaleX(-1);
+}
+
 .container {
   width: 100%;
   max-width: 1120px;
@@ -188,6 +195,19 @@ a:hover, a:focus-visible {
     display: none !important;
   }
 }
+.burger .burger-icon {
+  width: 1em;
+  height: 1em;
+  width: 2cap;
+  height: 2cap;
+  display: inline-block;
+  vertical-align: middle;
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 2.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
 
 /* =========================
   Mobile navigation
@@ -284,7 +304,7 @@ a:hover, a:focus-visible {
   color: #f9fafb;
   font-size: 0.8rem;
   font-weight: normal;
-  padding: 0.4rem 0.8rem;
+  padding: 0.4rem 0.6rem;
   line-height: 1;
 }
 
@@ -301,76 +321,6 @@ a:hover, a:focus-visible {
   .btn-full:not(.exempt) {
     width: fit-content;
   }
-}
-
-.hero {
-  position: relative;
-  min-height: calc(100svh - 8vh);
-  color: #f9fafb;
-  display: flex;
-  align-items: stretch;
-  overflow: hidden;
-}
-
-.hero-media {
-  position: absolute;
-  inset: 0;
-  background-image: url("../images/users/hero-crossfit-group.png");
-  background-size: cover;
-  background-position: center;
-  filter: brightness(0.55);
-}
-
-.hero-overlay {
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(circle at top, transparent, rgba(34, 60, 72, 0.85));
-}
-
-.hero-content {
-  position: relative;
-  padding-block: 5rem 4rem;
-  max-width: 1120px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  align-items: flex-start;
-}
-
-.eyebrow {
-  text-transform: uppercase;
-  font-size: 0.8rem;
-  letter-spacing: 0.1em;
-  color: #C3CACE;
-  margin-bottom: 0.6rem;
-}
-
-.hero h1 {
-  line-height: 1.2;
-  margin-bottom: 1rem;
-  margin-top: 0;
-  font-size: clamp(2.5rem, 8vw, 5.5rem);
-}
-
-.hero-text {
-  font-size: 1rem;
-  margin-bottom: 1.5rem;
-}
-@media (min-width: 768px) {
-  .hero-text {
-    font-size: 1.05rem;
-  }
-}
-
-.hero-cta {
-  display: flex;
-  flex-direction: column;
-  gap: 1em;
-  width: 100%;
-}
-.hero-cta .hero-note {
-  font-size: 0.9rem;
-  opacity: 0.9;
 }
 
 main {
@@ -563,6 +513,9 @@ h2 {
   font-size: 2rem;
   outline-offset: 2px;
   outline: 2px solid #F0B83B;
+}
+.card span svg {
+  width: 1.6em;
 }
 .card p {
   font-size: 0.95rem;
@@ -883,6 +836,10 @@ h2 {
   padding: 0.75rem;
   font-size: 1.2rem;
 }
+.mov-header .movement-icon svg {
+  height: 2cap;
+  aspect-ratio: 1;
+}
 
 .mov-body {
   padding: 0 0.75rem 0.75rem;
@@ -1092,6 +1049,9 @@ h2 {
 .social-links a:hover, .social-links a:focus-visible {
   color: #F0B83B;
   text-decoration: none;
+}
+.social-links a svg {
+  width: 1.6em;
 }
 
 .footer-bottom {

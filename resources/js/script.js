@@ -2,14 +2,6 @@ const yearSpan = document.getElementById('annee-courante');
 if (yearSpan) {
     yearSpan.textContent = new Date().getFullYear();
 }
-const slider = document.getElementById("slider");
-function scrollSlider(direction) {
-    const slideWidth = slider.clientWidth;
-    slider.scrollBy({
-        left: direction * slideWidth,
-        behavior: "smooth"
-    });
-}
 if ("IntersectionObserver" in window) {
     const items = document.querySelectorAll(".js-reveal");
     const observer = new IntersectionObserver(
@@ -42,7 +34,13 @@ if ("IntersectionObserver" in window) {
 const burger = document.querySelector(".burger");
 const burger_icon = document.querySelector(".burger-icon");
 const menu = document.getElementById("mobile-menu");
-
+const closeMenu = () => {
+    burger.setAttribute("aria-expanded", "false");
+    burger.setAttribute("aria-label", "Ouvrir le menu");
+    menu.style.display = 'none';
+    burger_icon.classList.replace('fa-times', 'fa-bars')
+    document.body.style.overflow = "";
+}
 if (burger && menu) {
     burger.addEventListener("click", () => {
         const isOpen = burger.getAttribute("aria-expanded") === "true";
@@ -63,13 +61,7 @@ if (burger && menu) {
     });
 
     menu.querySelectorAll("a").forEach((link) => {
-        link.addEventListener("click", () => {
-            burger.setAttribute("aria-expanded", "false");
-            burger.setAttribute("aria-label", "Ouvrir le menu");
-            menu.style.display = 'none';
-            burger_icon.classList.replace('fa-times', 'fa-bars')
-            document.body.style.overflow = "";
-        });
+        link.addEventListener("click", closeMenu());
     });
 
     document.addEventListener("keydown", (e) => {
@@ -130,3 +122,5 @@ if (burger && menu) {
         }
     });
 })();
+const resa = document.querySelector('.header-actions .btn-secondary:not(.burger)');
+resa.addEventListener('click', function(){closeMenu()})
